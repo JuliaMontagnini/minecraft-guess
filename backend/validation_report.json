@@ -1,0 +1,37 @@
+[
+  {
+    "endpoint": "mobs",
+    "received": 76,
+    "valid": 76,
+    "invalid": 0,
+    "errors": []
+  },
+  {
+    "endpoint": "biomes",
+    "received": 64,
+    "valid": 64,
+    "invalid": 0,
+    "errors": []
+  },
+  {
+    "endpoint": "items",
+    "received": 100,
+    "valid": 100,
+    "invalid": 0,
+    "errors": []
+  },
+  {
+    "endpoint": "structures",
+    "received": 24,
+    "valid": 24,
+    "invalid": 0,
+    "errors": []
+  },
+  {
+    "endpoint": "enchantments",
+    "received": 40,
+    "valid": 40,
+    "invalid": 0,
+    "errors": []
+  }
+]
