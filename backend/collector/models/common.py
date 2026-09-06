@@ -50,11 +50,13 @@ class Drop(ApiModel):
     chance: float = Field(ge=0)
 
 
+HEX_COLOR_PATTERN = r"^#[0-9A-Fa-f]{6}$"
+
 class BiomeColors(ApiModel):
-    grass: str
-    water: str
-    foliage: str
-    sky: str
+    grass: str = Field(pattern=HEX_COLOR_PATTERN)
+    water: str = Field(pattern=HEX_COLOR_PATTERN)
+    foliage: str = Field(pattern=HEX_COLOR_PATTERN)
+    sky: str = Field(pattern=HEX_COLOR_PATTERN)
 
 
 class RecipeOutput(ApiModel):
@@ -72,3 +74,5 @@ class CraftingRecipe(ApiModel):
 class FoodValue(ApiModel):
     hunger: int = Field(ge=0)
     saturation: float = Field(ge=0)
+
+ENTITY_ID_PATTERN = r"^[a-z0-9][a-z0-9:_-]*$"
