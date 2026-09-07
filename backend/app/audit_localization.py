@@ -136,6 +136,8 @@ SUSPICIOUS_ENGLISH_WORDS = {
     "portals",
     "repels",
     "zombified",
+    "during",
+    "raids",
 }
 
 

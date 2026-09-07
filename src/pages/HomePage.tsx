@@ -180,17 +180,6 @@ export function HomePage() {
           >
             Escolha uma categoria
           </h2>
-
-          <p
-            className="
-              mt-4
-              text-lg
-              md:text-xl
-            "
-          >
-            Tente descobrir o segredo antes
-            de perder todas as vidas!
-          </p>
         </section>
 
 
@@ -290,7 +279,7 @@ export function HomePage() {
             className="
               mb-6
               text-center
-              text-3xl
+              text-2xl
             "
           >
             Como jogar?
@@ -301,7 +290,7 @@ export function HomePage() {
               flex
               flex-col
               gap-5
-              text-lg
+              text-center
             "
           >
             <p>
@@ -312,7 +301,7 @@ export function HomePage() {
 
             <p>
               Você começa cada partida com
-              5 vidas.
+              10 vidas.
             </p>
 
             <p>

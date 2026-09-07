@@ -559,6 +559,7 @@ export function GamePage() {
             text-center
             text-[#502D10]
           "
+        
         >
           <h1
             className="

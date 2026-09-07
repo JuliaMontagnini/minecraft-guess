@@ -1,0 +1,89 @@
+============================= test session starts ==============================
+platform linux -- Python 3.14.7, pytest-9.1.1, pluggy-1.6.0 -- /home/julia/Documentos/minecraft-guess/backend/.venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /home/julia/Documentos/minecraft-guess/backend
+plugins: anyio-4.15.1
+collecting ... collected 8 items
+
+tests/test_hints.py::test_database_has_304_entities PASSED               [ 12%]
+tests/test_hints.py::test_entity_counts_by_category PASSED               [ 25%]
+tests/test_hints.py::test_all_entities_have_pt_br_translation PASSED     [ 37%]
+tests/test_hints.py::test_all_entities_generate_five_hints PASSED        [ 50%]
+tests/test_hints.py::test_all_hints_are_unique_and_non_empty PASSED      [ 62%]
+tests/test_hints.py::test_hints_do_not_reveal_english_secret PASSED      [ 75%]
+tests/test_hints.py::test_hints_do_not_reveal_portuguese_secret FAILED   [ 87%]
+tests/test_hints.py::test_total_generated_hints_is_1520 PASSED           [100%]
+
+=================================== FAILURES ===================================
+__________________ test_hints_do_not_reveal_portuguese_secret __________________
+
+    def test_hints_do_not_reveal_portuguese_secret():
+        entities, translations = (
+            load_test_data()
+        )
+    
+        leaks = []
+    
+        for entity in entities:
+            translated_secret = (
+                translations.get(
+                    entity["name"].casefold()
+                )
+            )
+    
+            if not translated_secret:
+                continue
+    
+            payload = load_payload(
+                entity["raw_payload"]
+            )
+    
+            hints = build_hints(
+                entity_type=
+                    entity["entity_type"],
+    
+                payload=
+                    payload,
+    
+                secret_name=
+                    entity["name"],
+    
+                name_translations=
+                    translations,
+            )
+    
+            for number, hint in enumerate(
+                hints,
+                start=1,
+            ):
+                if contains_secret(
+                    hint,
+                    translated_secret,
+                ):
+                    leaks.append(
+                        (
+                            f"{entity['entity_type']} | "
+                            f"{entity['name']} "
+                            f"({translated_secret}) | "
+                            f"dica #{number}: "
+                            f"{hint}"
+                        )
+                    )
+    
+>       assert not leaks, (
+            "\nVazamentos em português:\n"
+            + "\n".join(leaks)
+        )
+E       AssertionError: 
+E         Vazamentos em português:
+E         biome | Jungle (Selva) | dica #4: Uma estrutura que pode aparecer aqui é Templo da selva.
+E         biome | Jungle (Selva) | dica #5: Um bloco característico que pode aparecer em mim é Tronco da selva.
+E         biome | Swamp (Pântano) | dica #5: Uma estrutura que pode aparecer aqui é Cabana do pântano.
+E         mob | Pillager (Saqueador) | dica #3: Posso aparecer em locais como Posto avançado do saqueador, Vilas (during raids).
+E         mob | Turtle (Tartaruga) | dica #4: Entre minhas fraquezas estão: raios, zumbis e afogados atacam filhotes de tartaruga.
+E       assert not ['biome | Jungle (Selva) | dica #4: Uma estrutura que pode aparecer aqui é Templo da selva.', 'biome | Jungle (Selva) | dica #5: Um bloco característico que pode aparecer em mim é Tronco da selva.', 'biome | Swamp (Pântano) | dica #5: Uma estrutura que pode aparecer aqui é Cabana do pântano.', 'mob | Pillager (Saqueador) | dica #3: Posso aparecer em locais como Posto avançado do saqueador, Vilas (during raids).', 'mob | Turtle (Tartaruga) | dica #4: Entre minhas fraquezas estão: raios, zumbis e afogados atacam filhotes de tartaruga.']
+
+tests/test_hints.py:358: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_hints.py::test_hints_do_not_reveal_portuguese_secret - Asse...
+========================= 1 failed, 7 passed in 1.08s ==========================

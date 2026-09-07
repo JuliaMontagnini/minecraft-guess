@@ -87,6 +87,74 @@ def normalize_guess(
 
     return normalized.casefold()
 
+def hint_contains_secret(
+    hint: str,
+    secret_name: str,
+) -> bool:
+    """
+    Verifica se um nome secreto aparece em uma dica.
+
+    A comparação ignora:
+    - maiúsculas/minúsculas;
+    - acentos;
+    - espaços extras.
+    """
+
+    normalized_hint = normalize_guess(
+        hint
+    )
+
+    normalized_secret = normalize_guess(
+        secret_name
+    )
+
+    if not normalized_secret:
+        return False
+
+    pattern = re.compile(
+        rf"(?<!\w)"
+        rf"{re.escape(normalized_secret)}"
+        rf"(?!\w)"
+    )
+
+    return bool(
+        pattern.search(
+            normalized_hint
+        )
+    )
+
+
+def remove_secret_leaks(
+    hints: list[str],
+    protected_names: list[str],
+) -> list[str]:
+    """
+    Remove dicas que contenham o nome secreto
+    em qualquer idioma protegido.
+    """
+
+    safe_hints = []
+
+    for hint in hints:
+        leaks_secret = any(
+            hint_contains_secret(
+                hint,
+                protected_name,
+            )
+            for protected_name
+            in protected_names
+            if protected_name
+        )
+
+        if leaks_secret:
+            continue
+
+        if hint not in safe_hints:
+            safe_hints.append(
+                hint
+            )
+
+    return safe_hints
 
 def load_payload(
     raw_payload,
@@ -217,6 +285,21 @@ def build_hints(
     )
 
     hints: list[str] = []
+
+    translated_secret_name = (
+        name_translations.get(
+            secret_name.casefold()
+        )
+    )
+
+    protected_secret_names = [
+        secret_name,
+    ]
+
+    if translated_secret_name:
+        protected_secret_names.append(
+            translated_secret_name
+        )
 
     # =====================================================
     # MOBS
@@ -920,6 +1003,17 @@ def build_hints(
             )
 
     # =====================================================
+    # REMOVE VAZAMENTOS DO SEGREDO
+    #
+    # Neste ponto removemos dicas que possam revelar
+    # tanto o nome original em inglês quanto o nome pt-BR.
+    # =====================================================
+
+    hints = remove_secret_leaks(
+        hints,
+        protected_secret_names,
+    )
+    # =====================================================
     # FALLBACKS
     #
     # Só entram se os campos específicos acima não
@@ -957,8 +1051,12 @@ def build_hints(
                 secret_name,
             )
 
-    return hints[:MAX_HINTS]
+    hints = remove_secret_leaks(
+        hints,
+        protected_secret_names,
+    )
 
+    return hints[:MAX_HINTS]
 
 # =========================================================
 # CRIAÇÃO DE PARTIDA

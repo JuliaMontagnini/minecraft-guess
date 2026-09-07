@@ -9,6 +9,8 @@ from typing import Any
 
 VALUE_TRANSLATIONS = {
 
+    "during raids":
+        "durante invasões",
     # -----------------------------------------------------
     # Tipos genéricos de equipamento
     # usados em applicableItems
@@ -61,7 +63,7 @@ VALUE_TRANSLATIONS = {
 
     "armor": "armadura",
     "armour": "armadura",
-    
+
     # -----------------------------------------------------
     # Dimensões
     # -----------------------------------------------------
