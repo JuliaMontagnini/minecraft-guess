@@ -7,19 +7,24 @@ import {
 import { HomePage } from "./pages/HomePage";
 import { GamePage } from "./pages/GamePage";
 
+
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route
+          path="/"
+          element={<HomePage />}
+        />
 
         <Route
-          path="/game/:category"
+          path="/game/:category/:gameId"
           element={<GamePage />}
         />
       </Routes>
     </BrowserRouter>
   );
 }
+
 
 export default App;

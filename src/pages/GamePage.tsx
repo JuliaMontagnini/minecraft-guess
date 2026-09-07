@@ -1,155 +1,533 @@
-import { FormEvent, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import {
+  useEffect,
+  useState,
+} from "react";
 
-import { GuessHistory } from "../components/GuessHistory";
-import { HintList } from "../components/HintList";
-import { Lives } from "../components/Lives";
+import type {
+  SyntheticEvent,
+} from "react";
 
-import brownBackground from "../assets/fundo-quadriculado-marrom.png";
-import greenBackground from "../assets/fundo-quadriculado-verde.png";
+import {
+  useNavigate,
+  useParams,
+} from "react-router-dom";
+
+import {
+  GuessHistory,
+} from "../components/GuessHistory";
+
+import {
+  HintList,
+} from "../components/HintList";
+
+import {
+  Lives,
+} from "../components/Lives";
+
+import {
+  createGame,
+  getGame,
+  requestHint,
+  submitGuess,
+  type Category,
+  type GameStatus,
+} from "../services/gameApi";
+
+import brownBackground from
+  "../assets/fundo-quadriculado-marrom.png";
+
+import greenBackground from
+  "../assets/fundo-quadriculado-verde.png";
+
 
 const MAX_LIVES = 5;
 
-/*
-  Dados temporários.
 
-  Mais tarde isto será substituído
-  pelos dados recebidos da nossa API AWS.
-*/
-const mockGame = {
-  secret: "Plains",
+const categoryLabels:
+  Record<string, string> = {
+    mobs: "Mobs",
+    biomes: "Biomas",
+    items: "Itens",
+    structures: "Estruturas",
+    enchantments: "Encantamentos",
+    random: "Aleatório",
+  };
 
-  hints: [
-    "Sou encontrado no Overworld.",
-    "Tenho terreno predominantemente plano.",
-    "Aldeias podem ser encontradas em mim.",
-    "Sou um dos biomas mais conhecidos do Minecraft.",
-  ],
-};
 
-const categoryLabels: Record<string, string> = {
-  mobs: "Mobs",
-  biomes: "Biomas",
-  items: "Itens",
-  structures: "Estruturas",
-  enchantments: "Encantamentos",
-  random: "Aleatório",
-};
+const validCategories: Category[] = [
+  "mobs",
+  "biomes",
+  "items",
+  "structures",
+  "enchantments",
+  "random",
+];
+
 
 export function GamePage() {
-  const { category = "random" } = useParams();
+  const {
+    category = "random",
+    gameId,
+  } = useParams();
 
   const navigate = useNavigate();
 
-  const [answer, setAnswer] = useState("");
-  const [lives, setLives] = useState(MAX_LIVES);
 
-  const [guesses, setGuesses] = useState<string[]>([]);
+  const [answer, setAnswer] =
+    useState("");
 
-  const [visibleHintCount, setVisibleHintCount] =
-    useState(0);
+  const [lives, setLives] =
+    useState(MAX_LIVES);
+
+  const [guesses, setGuesses] =
+    useState<string[]>([]);
+
+  const [hints, setHints] =
+    useState<string[]>([]);
 
   const [gameStatus, setGameStatus] =
-    useState<"playing" | "won" | "lost">("playing");
+    useState<GameStatus>("playing");
 
-  const visibleHints = mockGame.hints.slice(
-    0,
-    visibleHintCount,
-  );
+  const [
+    secretAnswer,
+    setSecretAnswer,
+  ] =
+    useState<string | null>(null);
 
-  function loseLife() {
-    setLives((currentLives) => {
-      const newLives = currentLives - 1;
+  const [loading, setLoading] =
+    useState(false);
 
-      if (newLives <= 0) {
-        setGameStatus("lost");
-        return 0;
+  const [
+    initializing,
+    setInitializing,
+  ] =
+    useState(true);
+
+  const [error, setError] =
+    useState<string | null>(null);
+
+
+  useEffect(() => {
+    if (!gameId) {
+      setInitializing(false);
+      return;
+    }
+
+    let cancelled = false;
+
+
+    async function restoreGame() {
+      try {
+        const game = await getGame(
+          gameId as string,
+        );
+
+        if (cancelled) {
+          return;
+        }
+
+        setLives(
+          game.lives,
+        );
+
+        setGameStatus(
+          game.status,
+        );
+
+        setSecretAnswer(
+          game.answer,
+        );
+
+        setGuesses(
+          game.guesses
+            .filter(
+              (guess) =>
+                !guess.correct,
+            )
+            .map(
+              (guess) =>
+                guess.guess,
+            ),
+        );
+
+        setHints(
+          game.hints.map(
+            (hint) =>
+              hint.hint,
+          ),
+        );
+
+        setError(null);
+      } catch (error) {
+        if (cancelled) {
+          return;
+        }
+
+        setError(
+          error instanceof Error
+            ? error.message
+            : (
+              "Não foi possível "
+              + "recuperar a partida."
+            ),
+        );
+      } finally {
+        if (!cancelled) {
+          setInitializing(false);
+        }
       }
+    }
 
-      return newLives;
-    });
-  }
 
-  function handleNewHint() {
+    restoreGame();
+
+
+    return () => {
+      cancelled = true;
+    };
+  }, [gameId]);
+
+
+  async function handleNewHint() {
     if (
-      gameStatus !== "playing" ||
-      lives <= 0 ||
-      visibleHintCount >= mockGame.hints.length
+      !gameId
+      || loading
+      || gameStatus !== "playing"
     ) {
       return;
     }
 
-    setVisibleHintCount((count) => count + 1);
+    try {
+      setLoading(true);
+      setError(null);
 
-    loseLife();
+      const result = await requestHint(
+        gameId,
+      );
+
+      setHints(
+        (current) => [
+          ...current,
+          result.hint,
+        ],
+      );
+
+      setLives(
+        result.lives,
+      );
+
+      setGameStatus(
+        result.status,
+      );
+
+      if (result.answer) {
+        setSecretAnswer(
+          result.answer,
+        );
+      }
+    } catch (error) {
+      setError(
+        error instanceof Error
+          ? error.message
+          : (
+            "Não foi possível "
+            + "obter a dica."
+          ),
+      );
+    } finally {
+      setLoading(false);
+    }
   }
 
-  function handleGuess(event: FormEvent<HTMLFormElement>) {
+
+  async function handleGuess(
+    event:
+      SyntheticEvent<HTMLFormElement>,
+  ) {
     event.preventDefault();
 
-    const cleanAnswer = answer.trim();
-
-    if (!cleanAnswer || gameStatus !== "playing") {
+    if (
+      !gameId
+      || loading
+      || gameStatus !== "playing"
+    ) {
       return;
     }
 
-    const isCorrect =
-      cleanAnswer.localeCompare(
-        mockGame.secret,
-        undefined,
-        {
-          sensitivity: "accent",
-        },
-      ) === 0;
+    const cleanAnswer =
+      answer.trim();
 
-    if (isCorrect) {
-      setGameStatus("won");
+    if (!cleanAnswer) {
       return;
     }
 
-    setGuesses((current) => [
-      ...current,
-      cleanAnswer,
-    ]);
+    try {
+      setLoading(true);
+      setError(null);
 
-    setAnswer("");
+      const result =
+        await submitGuess(
+          gameId,
+          cleanAnswer,
+        );
 
-    loseLife();
+      setLives(
+        result.lives,
+      );
+
+      setGameStatus(
+        result.status,
+      );
+
+      if (!result.correct) {
+        setGuesses(
+          (current) => [
+            ...current,
+            cleanAnswer,
+          ],
+        );
+      }
+
+      if (result.answer) {
+        setSecretAnswer(
+          result.answer,
+        );
+      }
+
+      setAnswer("");
+    } catch (error) {
+      setError(
+        error instanceof Error
+          ? error.message
+          : (
+            "Não foi possível "
+            + "enviar o palpite."
+          ),
+      );
+    } finally {
+      setLoading(false);
+    }
   }
+
+
+  async function handlePlayAgain() {
+    if (loading) {
+      return;
+    }
+
+    if (
+      !validCategories.includes(
+        category as Category,
+      )
+    ) {
+      navigate("/");
+      return;
+    }
+
+    try {
+      setLoading(true);
+      setError(null);
+
+      const newGame =
+        await createGame(
+          category as Category,
+        );
+
+      navigate(
+        `/game/${category}/${newGame.game_id}`,
+      );
+    } catch (error) {
+      setError(
+        error instanceof Error
+          ? error.message
+          : (
+            "Não foi possível "
+            + "iniciar outra partida."
+          ),
+      );
+    } finally {
+      setLoading(false);
+    }
+  }
+
+
+  if (initializing) {
+    return (
+      <main
+        className="
+          flex
+          min-h-screen
+          items-center
+          justify-center
+          bg-[#8E5A2F]
+          p-6
+          text-[#F2F5D6]
+        "
+      >
+        <p className="text-2xl">
+          Carregando partida...
+        </p>
+      </main>
+    );
+  }
+
+
+  if (!gameId) {
+    return (
+      <main
+        className="
+          flex
+          min-h-screen
+          items-center
+          justify-center
+          bg-[#8E5A2F]
+          p-6
+          text-[#F2F5D6]
+        "
+      >
+        <div className="text-center">
+          <p className="text-2xl">
+            Partida inválida.
+          </p>
+
+          <button
+            type="button"
+            onClick={() =>
+              navigate("/")
+            }
+            className="
+              mt-6
+              rounded-xl
+              bg-[#F2F5D6]
+              px-6
+              py-3
+              text-[#502D10]
+            "
+          >
+            Voltar ao Menu
+          </button>
+        </div>
+      </main>
+    );
+  }
+
 
   if (gameStatus === "won") {
     return (
-      <main className="flex min-h-screen items-center justify-center bg-[#8E5A2F] p-6">
-        <div className="w-full max-w-lg rounded-2xl bg-[#F2F5D6] p-8 text-center text-[#502D10]">
-          <h1 className="mb-5 text-3xl">
+      <main
+        className="
+          flex
+          min-h-screen
+          items-center
+          justify-center
+          bg-[#8E5A2F]
+          p-6
+        "
+      >
+        <div
+          className="
+            w-full
+            max-w-lg
+            rounded-2xl
+            bg-[#F2F5D6]
+            p-8
+            text-center
+            text-[#502D10]
+          "
+        >
+          <h1
+            className="
+              mb-5
+              text-3xl
+            "
+          >
             Parabéns! Você acertou!
           </h1>
 
-          <Lives lives={lives} />
+          <Lives
+            lives={lives}
+          />
 
-          <p className="mt-6 text-2xl">
-            {mockGame.secret}
+          <p
+            className="
+              mt-6
+              text-2xl
+            "
+          >
+            {secretAnswer}
           </p>
 
           <p className="mt-4">
-            {visibleHintCount} dica(s) • {guesses.length} palpite(s) errado(s)
+            {hints.length} dica(s)
+            {" • "}
+            {guesses.length}
+            {" "}
+            palpite(s) errado(s)
           </p>
 
-          <div className="mt-8 flex justify-center gap-4">
+
+          {error && (
+            <p
+              className="
+                mt-5
+                rounded-lg
+                bg-red-100
+                px-4
+                py-3
+                text-red-700
+              "
+            >
+              {error}
+            </p>
+          )}
+
+
+          <div
+            className="
+              mt-8
+              flex
+              flex-wrap
+              justify-center
+              gap-4
+            "
+          >
             <button
               type="button"
-              onClick={() => navigate("/")}
-              className="rounded-lg bg-[#F2F5D6] px-5 py-3 shadow"
+              onClick={() =>
+                navigate("/")
+              }
+              disabled={loading}
+              className="
+                rounded-lg
+                bg-[#63C947]
+                px-5
+                py-3
+                disabled:cursor-not-allowed
+                disabled:opacity-50
+              "
             >
               Menu
             </button>
 
+
             <button
               type="button"
-              onClick={() => window.location.reload()}
-              className="rounded-lg bg-[#F2F5D6] px-5 py-3 shadow"
+              onClick={
+                handlePlayAgain
+              }
+              disabled={loading}
+              className="
+                rounded-lg
+                bg-[#63C947]
+                px-5
+                py-3
+                disabled:cursor-not-allowed
+                disabled:opacity-50
+              "
             >
-              Jogar novamente
+              {loading
+                ? "Criando partida..."
+                : "Jogar novamente"}
             </button>
           </div>
         </div>
@@ -157,43 +535,127 @@ export function GamePage() {
     );
   }
 
+
   if (gameStatus === "lost") {
     return (
-      <main className="flex min-h-screen items-center justify-center bg-[#8E5A2F] p-6">
-        <div className="w-full max-w-lg rounded-2xl bg-[#F2F5D6] p-8 text-center text-[#502D10]">
-          <h1 className="mb-5 text-3xl">
+      <main
+        className="
+          flex
+          min-h-screen
+          items-center
+          justify-center
+          bg-[#8E5A2F]
+          p-6
+        "
+      >
+        <div
+          className="
+            w-full
+            max-w-lg
+            rounded-2xl
+            bg-[#F2F5D6]
+            p-8
+            text-center
+            text-[#502D10]
+          "
+        >
+          <h1
+            className="
+              mb-5
+              text-3xl
+            "
+          >
             Game Over
           </h1>
 
-          <Lives lives={0} />
+          <Lives
+            lives={0}
+          />
 
           <p className="mt-6">
             A resposta era:
           </p>
 
-          <p className="mt-2 text-2xl">
-            {mockGame.secret}
+          <p
+            className="
+              mt-2
+              text-2xl
+            "
+          >
+            {secretAnswer}
           </p>
 
           <p className="mt-4">
-            {visibleHintCount} dica(s) • {guesses.length} palpite(s) errado(s)
+            {hints.length} dica(s)
+            {" • "}
+            {guesses.length}
+            {" "}
+            palpite(s) errado(s)
           </p>
 
-          <div className="mt-8 flex justify-center gap-4">
+
+          {error && (
+            <p
+              className="
+                mt-5
+                rounded-lg
+                bg-red-100
+                px-4
+                py-3
+                text-red-700
+              "
+            >
+              {error}
+            </p>
+          )}
+
+
+          <div
+            className="
+              mt-8
+              flex
+              flex-wrap
+              justify-center
+              gap-4
+            "
+          >
             <button
               type="button"
-              onClick={() => navigate("/")}
-              className="rounded-lg bg-[#F2F5D6] px-5 py-3 shadow"
+              onClick={() =>
+                navigate("/")
+              }
+              disabled={loading}
+              className="
+                rounded-lg
+                bg-[#63C947]
+                px-5
+                py-3
+                disabled:cursor-not-allowed
+                disabled:opacity-50
+              "
             >
               Menu
             </button>
 
+
             <button
               type="button"
-              onClick={() => window.location.reload()}
-              className="rounded-lg bg-[#F2F5D6] px-5 py-3 shadow"
+              onClick={
+                handlePlayAgain
+              }
+              disabled={loading}
+              className="
+                rounded-lg
+                bg-[#63C947]
+                px-5
+                py-3
+                disabled:cursor-not-allowed
+                disabled:opacity-50
+              "
             >
-              Jogar novamente
+              {loading
+                ? "Criando partida..."
+                : "Jogar novamente"}
             </button>
           </div>
         </div>
@@ -201,13 +663,22 @@ export function GamePage() {
     );
   }
 
+
   return (
     <main
-      className="min-h-screen text-[#F2F5D6]"
+      className="
+        min-h-screen
+        text-[#F2F5D6]
+      "
       style={{
-        backgroundColor: "#8E5A2F",
-        backgroundImage: `url(${brownBackground})`,
-        backgroundRepeat: "repeat",
+        backgroundColor:
+          "#8E5A2F",
+
+        backgroundImage:
+          `url(${brownBackground})`,
+
+        backgroundRepeat:
+          "repeat",
       }}
     >
       <header
@@ -220,15 +691,26 @@ export function GamePage() {
           md:min-h-40
         "
         style={{
-          backgroundColor: "rgba(78, 165, 51, 0.62)",
-          backgroundImage: `url(${greenBackground})`,
-          backgroundSize: "cover",
+          backgroundColor:
+            "rgba(78, 165, 51, 0.62)",
+
+          backgroundImage:
+            `url(${greenBackground})`,
+
+          backgroundSize:
+            "cover",
         }}
       >
-        <h1 className="text-4xl md:text-6xl">
+        <h1
+          className="
+            text-4xl
+            md:text-6xl
+          "
+        >
           MinecraftGuess
         </h1>
       </header>
+
 
       <div
         className="
@@ -243,14 +725,36 @@ export function GamePage() {
           py-12
         "
       >
-        <section className="flex w-full flex-col items-center gap-6">
-          <p className="text-center text-xl md:text-2xl">
+        <section
+          className="
+            flex
+            w-full
+            flex-col
+            items-center
+            gap-6
+          "
+        >
+          <p
+            className="
+              text-center
+              text-xl
+              md:text-2xl
+            "
+          >
             Categoria:{" "}
-            {categoryLabels[category] ?? category}
+            {
+              categoryLabels[
+                category
+              ]
+              ?? category
+            }
           </p>
 
+
           <form
-            onSubmit={handleGuess}
+            onSubmit={
+              handleGuess
+            }
             className="
               flex
               w-full
@@ -262,10 +766,15 @@ export function GamePage() {
             <input
               type="text"
               value={answer}
-              onChange={(event) =>
-                setAnswer(event.target.value)
+              onChange={
+                (event) =>
+                  setAnswer(
+                    event.target.value,
+                  )
               }
-              placeholder="Insira seu palpite..."
+              disabled={loading}
+              placeholder=
+                "Insira seu palpite..."
               className="
                 w-full
                 max-w-md
@@ -278,13 +787,33 @@ export function GamePage() {
                 text-[#502D10]
                 outline-none
                 placeholder:text-[#502D10]/50
-
                 focus:ring-4
                 focus:ring-[#63C947]
+                disabled:opacity-60
               "
             />
 
-            <Lives lives={lives} />
+
+            <Lives
+              lives={lives}
+            />
+
+
+            {error && (
+              <p
+                className="
+                  rounded-lg
+                  bg-[#F2F5D6]
+                  px-4
+                  py-3
+                  text-center
+                  text-red-700
+                "
+              >
+                {error}
+              </p>
+            )}
+
 
             <div
               className="
@@ -298,11 +827,10 @@ export function GamePage() {
             >
               <button
                 type="button"
-                onClick={handleNewHint}
-                disabled={
-                  visibleHintCount >=
-                  mockGame.hints.length
+                onClick={
+                  handleNewHint
                 }
+                disabled={loading}
                 className="
                   rounded-xl
                   bg-[#F2F5D6]
@@ -310,16 +838,19 @@ export function GamePage() {
                   py-3
                   text-[#502D10]
                   shadow
-
                   disabled:cursor-not-allowed
                   disabled:opacity-50
                 "
               >
-                Nova dica
+                {loading
+                  ? "Aguarde..."
+                  : "Nova dica"}
               </button>
+
 
               <button
                 type="submit"
+                disabled={loading}
                 className="
                   rounded-xl
                   bg-[#F2F5D6]
@@ -327,14 +858,20 @@ export function GamePage() {
                   py-3
                   text-[#502D10]
                   shadow
+                  disabled:cursor-not-allowed
+                  disabled:opacity-50
                 "
               >
                 Enviar palpite
               </button>
 
+
               <button
                 type="button"
-                onClick={() => navigate("/")}
+                onClick={() =>
+                  navigate("/")
+                }
+                disabled={loading}
                 className="
                   rounded-xl
                   bg-[#F2F5D6]
@@ -342,6 +879,8 @@ export function GamePage() {
                   py-3
                   text-[#502D10]
                   shadow
+                  disabled:cursor-not-allowed
+                  disabled:opacity-50
                 "
               >
                 Voltar ao Menu
@@ -350,17 +889,33 @@ export function GamePage() {
           </form>
         </section>
 
-        <GuessHistory guesses={guesses} />
 
-        <HintList hints={visibleHints} />
+        <GuessHistory
+          guesses={guesses}
+        />
+
+
+        <HintList
+          hints={hints}
+        />
       </div>
 
-      <footer className="p-8 text-center">
+
+      <footer
+        className="
+          p-8
+          text-center
+        "
+      >
         <a
-          href="https://api.astroworldmc.com"
+          href=
+            "https://api.astroworldmc.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="underline"
+          className="
+            underline
+            underline-offset-4
+          "
         >
           Powered by Astroworld API
         </a>
