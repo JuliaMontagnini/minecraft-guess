@@ -1,5 +1,12 @@
-from fastapi import FastAPI, HTTPException
-from fastapi.middleware.cors import CORSMiddleware
+from fastapi import (
+    FastAPI,
+    HTTPException,
+    Query,
+)
+
+from fastapi.middleware.cors import (
+    CORSMiddleware,
+)
 
 from app.game_service import (
     GameError,
@@ -11,55 +18,138 @@ from app.game_service import (
 )
 
 from app.schemas import (
+    Category,
     GameCreateRequest,
     GameCreateResponse,
     GameStateResponse,
     GuessRequest,
     GuessResponse,
     HintResponse,
+    SuggestionResponse,
 )
+
+from app.suggestion_service import (
+    suggest_entities,
+)
+
 
 app = FastAPI(
     title="MinecraftGuess API",
     version="1.0.0",
-    description=(
-        "API responsável pelas partidas "
-        "do MinecraftGuess."
-    ),
 )
 
 
-# ---------------------------------------------------------
+# =========================================================
 # CORS
-# Permite que o frontend React local acesse esta API.
-# ---------------------------------------------------------
+# =========================================================
+
 
 app.add_middleware(
     CORSMiddleware,
+
     allow_origins=[
         "http://localhost:5173",
         "http://127.0.0.1:5173",
     ],
+
     allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
+
+    allow_methods=[
+        "*",
+    ],
+
+    allow_headers=[
+        "*",
+    ],
 )
 
 
-# ---------------------------------------------------------
+# =========================================================
 # HEALTH CHECK
-# ---------------------------------------------------------
+# =========================================================
 
-@app.get("/health")
+
+@app.get(
+    "/health"
+)
 def health():
     return {
         "status": "ok",
     }
 
 
+# =========================================================
+# AUTOCOMPLETE
+# =========================================================
+
+
+@app.get(
+    "/entities/suggestions",
+    response_model=
+        SuggestionResponse,
+)
+def entity_suggestions(
+    q: str,
+
+    category:
+        Category = "random",
+
+    limit: int = Query(
+        default=6,
+        ge=1,
+        le=10,
+    ),
+):
+    suggestions = (
+        suggest_entities(
+            query=q,
+            category=category,
+            limit=limit,
+        )
+    )
+
+    return {
+        "suggestions":
+            suggestions,
+    }
+
+
+# =========================================================
+# CRIAR PARTIDA
+# =========================================================
+
+
+@app.post(
+    "/games",
+    response_model=
+        GameCreateResponse,
+    status_code=201,
+)
+def new_game(
+    request:
+        GameCreateRequest,
+):
+    try:
+        return create_game(
+            request.category
+        )
+
+    except GameError as error:
+        raise HTTPException(
+            status_code=400,
+            detail=str(error),
+        ) from error
+
+
+# =========================================================
+# RECUPERAR PARTIDA
+# =========================================================
+
+
 @app.get(
     "/games/{game_id}",
-    response_model=GameStateResponse,
+    response_model=
+        GameStateResponse,
 )
 def game_state(
     game_id: str,
@@ -75,37 +165,16 @@ def game_state(
             detail=str(error),
         ) from error
 
-# ---------------------------------------------------------
-# CRIAR NOVA PARTIDA
-# ---------------------------------------------------------
 
-@app.post(
-    "/games",
-    response_model=GameCreateResponse,
-    status_code=201,
-)
-def new_game(
-    request: GameCreateRequest,
-):
-    try:
-        return create_game(
-            request.category
-        )
+# =========================================================
+# PALPITE
+# =========================================================
 
-    except GameError as error:
-        raise HTTPException(
-            status_code=400,
-            detail=str(error),
-        ) from error
-
-
-# ---------------------------------------------------------
-# ENVIAR PALPITE
-# ---------------------------------------------------------
 
 @app.post(
     "/games/{game_id}/guess",
-    response_model=GuessResponse,
+    response_model=
+        GuessResponse,
 )
 def guess(
     game_id: str,
@@ -130,13 +199,15 @@ def guess(
         ) from error
 
 
-# ---------------------------------------------------------
-# SOLICITAR NOVA DICA
-# ---------------------------------------------------------
+# =========================================================
+# DICA
+# =========================================================
+
 
 @app.post(
     "/games/{game_id}/hint",
-    response_model=HintResponse,
+    response_model=
+        HintResponse,
 )
 def hint(
     game_id: str,

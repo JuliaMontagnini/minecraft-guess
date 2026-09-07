@@ -13,11 +13,15 @@ Category = Literal[
 ]
 
 
-class GameCreateRequest(BaseModel):
+class GameCreateRequest(
+    BaseModel
+):
     category: Category
 
 
-class GameCreateResponse(BaseModel):
+class GameCreateResponse(
+    BaseModel
+):
     game_id: str
     category: str
     lives: int
@@ -25,14 +29,18 @@ class GameCreateResponse(BaseModel):
     status: str
 
 
-class GuessRequest(BaseModel):
+class GuessRequest(
+    BaseModel
+):
     guess: str = Field(
         min_length=1,
         max_length=255,
     )
 
 
-class GuessResponse(BaseModel):
+class GuessResponse(
+    BaseModel
+):
     game_id: str
     correct: bool
     lives: int
@@ -40,7 +48,9 @@ class GuessResponse(BaseModel):
     answer: str | None = None
 
 
-class HintResponse(BaseModel):
+class HintResponse(
+    BaseModel
+):
     game_id: str
     hint_number: int
     hint: str
@@ -48,22 +58,55 @@ class HintResponse(BaseModel):
     status: str
     answer: str | None = None
 
-class GameGuessHistoryItem(BaseModel):
+
+class GameGuessHistoryItem(
+    BaseModel
+):
     guess: str
     correct: bool
 
 
-class GameHintHistoryItem(BaseModel):
+class GameHintHistoryItem(
+    BaseModel
+):
     hint_number: int
     hint: str
 
 
-class GameStateResponse(BaseModel):
+class GameStateResponse(
+    BaseModel
+):
     game_id: str
     category: str
     lives: int
     max_lives: int
     status: str
     answer: str | None = None
-    guesses: list[GameGuessHistoryItem]
-    hints: list[GameHintHistoryItem]
+
+    guesses: list[
+        GameGuessHistoryItem
+    ]
+
+    hints: list[
+        GameHintHistoryItem
+    ]
+
+
+# =========================================================
+# AUTOCOMPLETE
+# =========================================================
+
+
+class EntitySuggestion(
+    BaseModel
+):
+    name: str
+    category: str
+
+
+class SuggestionResponse(
+    BaseModel
+):
+    suggestions: list[
+        EntitySuggestion
+    ]
