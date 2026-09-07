@@ -35,3 +35,6 @@ backend/.env
 # Logs
 backend/logs/
 *.log
+
+# Minecraft localization source
+backend/data/pt_br.json

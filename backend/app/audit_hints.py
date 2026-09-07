@@ -3,8 +3,11 @@ import re
 from sqlalchemy import text
 
 from app.database import engine
+
 from app.game_service import (
+    MAX_HINTS,
     build_hints,
+    load_name_translations,
     load_payload,
 )
 
@@ -21,10 +24,18 @@ def main():
                     name,
                     raw_payload
                 FROM entities
-                ORDER BY entity_type, name
+                ORDER BY
+                    entity_type,
+                    name
                 """
             )
         ).mappings().all()
+
+        name_translations = (
+            load_name_translations(
+                connection
+            )
+        )
 
     total = len(entities)
 
@@ -46,9 +57,10 @@ def main():
                 entity_type=entity["entity_type"],
                 payload=payload,
                 secret_name=entity["name"],
+                name_translations=name_translations,
             )
 
-            if len(hints) < 4:
+            if len(hints) < MAX_HINTS:
                 insufficient.append(
                     {
                         "type": entity["entity_type"],
@@ -84,7 +96,7 @@ def main():
 
     print(f"Entidades verificadas: {total}")
     print(
-        "Com menos de 4 dicas: "
+        f"Com menos de {MAX_HINTS} dicas: "
         f"{len(insufficient)}"
     )
     print(
@@ -98,7 +110,7 @@ def main():
 
     if insufficient:
         print("\n" + "-" * 70)
-        print("ENTIDADES COM MENOS DE 4 DICAS")
+        print(f"ENTIDADES COM MENOS DE{MAX_HINTS} DICAS")
         print("-" * 70)
 
         for item in insufficient:
@@ -141,7 +153,7 @@ def main():
     ):
         print(
             "✓ Todas as entidades possuem "
-            "4 dicas seguras."
+            f"{MAX_HINTS} dicas seguras."
         )
     else:
         print(

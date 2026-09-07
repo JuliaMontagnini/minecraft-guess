@@ -1,0 +1,262 @@
+TEXTOS SUSPEITOS ÚNICOS
+======================================================================
+Ocorrências suspeitas: 92
+Textos únicos: 86
+
+[3x]
+Posso ser obtido através de Loot Chest, trocas com aldeões.
+
+[3x]
+Entre minhas fraquezas estão: fogo, All damage sources.
+
+[2x]
+Uma forma de me obter é: fabricação, Mob drops (Skeleton).
+
+[2x]
+Uma forma de me obter é: baús de Dungeon, Creeper killed by Skeleton.
+
+[1x]
+Uma característica do meu terreno é: pointed dripstone stalactites and stalagmites.
+
+[1x]
+Uma característica do meu terreno é: dense oak and birch trees.
+
+[1x]
+Uma característica do meu terreno é: frozen surface water.
+
+[1x]
+Uma característica do meu terreno é: smooth snow-covered peaks.
+
+[1x]
+Uma característica do meu terreno é: frozen water surface.
+
+[1x]
+Uma característica do meu terreno é: moderate depth water.
+
+[1x]
+Uma característica do meu terreno é: giant 2x2 spruce trees with dense leaf cover.
+
+[1x]
+Uma característica do meu terreno é: narrow water channel.
+
+[1x]
+Uma característica do meu terreno é: snow-covered spruce trees.
+
+[1x]
+Uma característica do meu terreno é: soul sand and soul soil terrain.
+
+[1x]
+Uma característica do meu terreno é: scattered jungle trees.
+
+[1x]
+Um bloco característico que pode aparecer em mim é Jungle Log.
+
+[1x]
+Uma característica do meu terreno é: shallow water.
+
+[1x]
+Uma característica do meu terreno é: terracotta plateaus with oak trees.
+
+[1x]
+Posso ser obtido através de trocas com aldeões, Loot Chest.
+
+[1x]
+Posso ser obtido através de Piglin Bartering, Bastion Remnant Loot.
+
+[1x]
+Posso ser obtido através de Ancient City Loot Chest.
+
+[1x]
+Posso ser obtido através de Ominous Vault, Trial Chamber Loot.
+
+[1x]
+Uma forma de me obter é: fabricação, Village church.
+
+[1x]
+Uma forma de me obter é: Smelting Raw Beef, Killing cows with Fire Aspect.
+
+[1x]
+Uma forma de me obter é: Smelting Raw Chicken, Killing chickens with Fire Aspect.
+
+[1x]
+Uma forma de me obter é: Smelting Raw Porkchop, Killing pigs with Fire Aspect.
+
+[1x]
+Uma forma de me obter é: fabricação, Mob drops (Pillager).
+
+[1x]
+Uma forma de me obter é: Navio do End (End City).
+
+[1x]
+Uma forma de me obter é: Using Glass Bottle on full Beehive or Bee Nest.
+
+[1x]
+Uma forma de me obter é: fabricação, Mob drops (Zombified Piglin).
+
+[1x]
+Uma forma de me obter é: fabricação, Bridge chest loot (Bastion Remnant).
+
+[1x]
+Uma forma de me obter é: Bancada de Ferraria (Diamond Boots + Netherite Upgrade + Netherite Ingot).
+
+[1x]
+Uma forma de me obter é: Bancada de Ferraria (Diamond Chestplate + Netherite Upgrade + Netherite Ingot).
+
+[1x]
+Uma forma de me obter é: Bancada de Ferraria (Diamond Helmet + Netherite Upgrade + Netherite Ingot).
+
+[1x]
+Uma forma de me obter é: Bancada de Ferraria (Diamond Leggings + Netherite Upgrade + Netherite Ingot).
+
+[1x]
+Uma forma de me obter é: Bancada de Ferraria (Diamond Pickaxe + Netherite Upgrade + Netherite Ingot).
+
+[1x]
+Uma forma de me obter é: Bancada de Ferraria (Diamond Sword + Netherite Upgrade + Netherite Ingot).
+
+[1x]
+Uma forma de me obter é: alquimia (Awkward Potion + Magma Cream).
+
+[1x]
+Uma forma de me obter é: alquimia (Awkward Potion + Glistering Melon Slice).
+
+[1x]
+Uma forma de me obter é: alquimia (Potion of Night Vision + Fermented Spider Eye).
+
+[1x]
+Uma forma de me obter é: alquimia (Awkward Potion + Golden Carrot).
+
+[1x]
+Uma forma de me obter é: alquimia (Awkward Potion + Phantom Membrane).
+
+[1x]
+Uma forma de me obter é: alquimia (Awkward Potion + Sugar).
+
+[1x]
+Uma forma de me obter é: alquimia (Awkward Potion + Blaze Powder).
+
+[1x]
+Uma forma de me obter é: alquimia (Awkward Potion + Pufferfish).
+
+[1x]
+Uma forma de me obter é: Mining Redstone Ore, Witch drops.
+
+[1x]
+Uma forma de me obter é: fabricação (with Lingering Potion), trocas com aldeão Fletcher.
+
+[1x]
+Uma forma de me obter é: Mob drops (Evoker).
+
+[1x]
+Uma forma de me obter é: Mob drops (Drowned).
+
+[1x]
+Uma forma de me obter é: fabricação, Mob drops (Breeze).
+
+[1x]
+Entre minhas fraquezas estão: Snowballs (3 damage), água.
+
+[1x]
+Posso aparecer em locais como Desert Village.
+
+[1x]
+Posso aparecer em locais como Vila, Swamp Hut.
+
+[1x]
+Entre minhas fraquezas estão: Cats and ocelots (flees from them), Shields.
+
+[1x]
+Entre minhas fraquezas estão: Suffocation on land, Drowning (needs both air and water).
+
+[1x]
+Entre minhas fraquezas estão: Destroy End Crystals first, Beds (explode in The End).
+
+[1x]
+Posso aparecer em locais como All Overworld biomes, O End, Nether (Warped Forest, Soul Sand Valley).
+
+[1x]
+Entre minhas fraquezas estão: encantamento Ruína dos Artrópodes, All damage sources.
+
+[1x]
+Entre minhas fraquezas estão: Melee rush (prevent spellcasting), Ranged attacks.
+
+[1x]
+Posso aparecer em locais como Underground water.
+
+[1x]
+Entre minhas fraquezas estão: luz do sol, Cats (flees from them).
+
+[1x]
+Entre minhas fraquezas estão: fogo (but immune to lava), Smite enchantment (becomes zombified in Overworld).
+
+[1x]
+Entre minhas fraquezas estão: Shields, Melee rush.
+
+[1x]
+Entre minhas fraquezas estão: Shield stun, High ground.
+
+[1x]
+Entre minhas fraquezas estão: Attack when shell is open, Arrows.
+
+[1x]
+Entre minhas fraquezas estão: Lightning, Zombies and Drowned target baby turtles.
+
+[1x]
+Entre minhas fraquezas estão: Limited lifespan, All damage sources.
+
+[1x]
+Entre minhas fraquezas estão: Ranged attacks (kiting), Shields.
+
+[1x]
+Entre minhas fraquezas estão: Instant Damage potions, Melee while drinking.
+
+[1x]
+Um perigo associado a mim é: Warden is the most dangerous mob in the game (500 HP, can kill in 2 hits).
+
+[1x]
+Um perigo associado a mim é: Piglin brutes cannot be distracted with gold and deal massive damage.
+
+[1x]
+Um perigo associado a mim é: Drowning if buried under water.
+
+[1x]
+Um perigo associado a mim é: Must defeat the Ender Dragon first.
+
+[1x]
+Um perigo associado a mim é: Zombie villager in basement can attack.
+
+[1x]
+Um perigo associado a mim é: Arrow trap dispensers on the first floor.
+
+[1x]
+Um perigo associado a mim é: Cave spider spawners are very dangerous in tight spaces.
+
+[1x]
+Um perigo associado a mim é: Blaze fireballs and fire damage.
+
+[1x]
+Um perigo associado a mim é: Mining fatigue from elder guardians (slows mining by 99.7%).
+
+[1x]
+Um perigo associado a mim é: Drowned can carry tridents.
+
+[1x]
+Um perigo associado a mim é: Continuous pillager spawning.
+
+[1x]
+Um perigo associado a mim é: Magma blocks deal damage when stood on.
+
+[1x]
+Um perigo associado a mim é: Silverfish spawner near end portal.
+
+[1x]
+Um perigo associado a mim é: Trial spawners scale difficulty with player count.
+
+[1x]
+Um perigo associado a mim é: Zombie sieges at night.
+
+[1x]
+Um perigo associado a mim é: Witch throws harmful potions.
+
+[1x]
+Um perigo associado a mim é: Vindicators deal heavy melee damage.

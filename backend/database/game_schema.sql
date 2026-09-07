@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS games (
     requested_category VARCHAR(30) NOT NULL,
 
     lives_remaining TINYINT UNSIGNED NOT NULL
-        DEFAULT 5,
+        DEFAULT 10,
 
     status VARCHAR(20) NOT NULL
         DEFAULT 'playing',
@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS games (
 
     CONSTRAINT chk_game_lives
         CHECK (
-            lives_remaining <= 5
+            lives_remaining <= 10
         )
 );
 

@@ -40,8 +40,8 @@ import greenBackground from
   "../assets/fundo-quadriculado-verde.png";
 
 
-const MAX_LIVES = 5;
-
+const MAX_LIVES = 10;
+const MAX_HINTS = 5;
 
 const categoryLabels:
   Record<string, string> = {
@@ -193,6 +193,7 @@ export function GamePage() {
       !gameId
       || loading
       || gameStatus !== "playing"
+      || hints.length >= MAX_HINTS
     ) {
       return;
     }
@@ -827,10 +828,11 @@ export function GamePage() {
             >
               <button
                 type="button"
-                onClick={
-                  handleNewHint
+                onClick={handleNewHint}
+                disabled={
+                  loading
+                  || hints.length >= MAX_HINTS
                 }
-                disabled={loading}
                 className="
                   rounded-xl
                   bg-[#F2F5D6]
@@ -844,7 +846,9 @@ export function GamePage() {
               >
                 {loading
                   ? "Aguarde..."
-                  : "Nova dica"}
+                  : hints.length >= MAX_HINTS
+                    ? "Todas as dicas usadas"
+                    : "Nova dica"}
               </button>
 
 
@@ -894,6 +898,9 @@ export function GamePage() {
           guesses={guesses}
         />
 
+        <p className="text-center text-lg">
+          Dicas: {hints.length}/{MAX_HINTS}
+        </p>
 
         <HintList
           hints={hints}

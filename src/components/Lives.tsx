@@ -1,23 +1,60 @@
-import { Heart } from "./Heart";
+import {
+  Heart,
+  type HeartState,
+} from "./Heart";
+
 
 type LivesProps = {
   lives: number;
   maxLives?: number;
 };
 
+
 export function Lives({
   lives,
-  maxLives = 5,
+  maxLives = 10,
 }: LivesProps) {
+  const totalHearts =
+    Math.ceil(maxLives / 2);
+
+  function getHeartState(
+    index: number,
+  ): HeartState {
+    const pointsForHeart =
+      lives - index * 2;
+
+    if (pointsForHeart >= 2) {
+      return "full";
+    }
+
+    if (pointsForHeart === 1) {
+      return "half";
+    }
+
+    return "empty";
+  }
+
+
   return (
     <div
-      className="flex items-center justify-center gap-2"
-      aria-label={`${lives} de ${maxLives} vidas restantes`}
+      className="
+        flex
+        items-center
+        justify-center
+        gap-2
+      "
+      aria-label={
+        `${lives} de ${maxLives} pontos de vida restantes`
+      }
     >
-      {Array.from({ length: maxLives }).map((_, index) => (
+      {Array.from({
+        length: totalHearts,
+      }).map((_, index) => (
         <Heart
           key={index}
-          filled={index < lives}
+          state={
+            getHeartState(index)
+          }
         />
       ))}
     </div>
