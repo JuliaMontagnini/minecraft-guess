@@ -291,6 +291,22 @@ def build_hints(
                 secret_name,
             )
 
+        unique_blocks = payload.get(
+            "uniqueBlocks",
+            [],
+        )
+
+        if unique_blocks:
+            add_hint_if_safe(
+                hints,
+                (
+                    "Um bloco característico "
+                    "que pode aparecer em mim é "
+                    f"{unique_blocks[0]}."
+                ),
+                secret_name,
+            )
+
     elif entity_type == "item":
         add_hint_if_safe(
             hints,
@@ -475,7 +491,42 @@ def build_hints(
                 ),
                 secret_name,
             )
+        # -------------------------------------------------
+    # FALLBACKS
+    # Usados somente quando as dicas específicas
+    # não são suficientes.
+    # -------------------------------------------------
 
+    if len(hints) < MAX_HINTS:
+        category = payload.get(
+            "category"
+        )
+
+        if category:
+            add_hint_if_safe(
+                hints,
+                (
+                    "Faço parte da categoria "
+                    f"{category}."
+                ),
+                secret_name,
+            )
+
+    if len(hints) < MAX_HINTS:
+        version_added = payload.get(
+            "versionAdded"
+        )
+
+        if version_added:
+            add_hint_if_safe(
+                hints,
+                (
+                    "Estou presente no jogo "
+                    "desde a versão "
+                    f"{version_added}."
+                ),
+                secret_name,
+            )
     return hints[:MAX_HINTS]
 
 def submit_guess(
