@@ -1,3 +1,8 @@
+import os
+from pathlib import Path
+
+from dotenv import load_dotenv
+
 from fastapi import (
     FastAPI,
     HTTPException,
@@ -33,10 +38,17 @@ from app.suggestion_service import (
 )
 
 
-app = FastAPI(
-    title="MinecraftGuess API",
-    version="1.0.0",
+# =========================================================
+# CONFIGURAÇÃO DO AMBIENTE
+# =========================================================
+
+
+ENV_PATH = (
+    Path(__file__).resolve().parent.parent
+    / ".env"
 )
+
+load_dotenv(ENV_PATH)
 
 
 # =========================================================
@@ -44,13 +56,48 @@ app = FastAPI(
 # =========================================================
 
 
+DEFAULT_CORS_ORIGINS = [
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+]
+
+
+def get_cors_origins() -> list[str]:
+    raw_origins = os.getenv(
+        "CORS_ORIGINS",
+        "",
+    )
+
+    if not raw_origins.strip():
+        return DEFAULT_CORS_ORIGINS
+
+    return [
+        origin.strip().rstrip("/")
+        for origin
+        in raw_origins.split(",")
+        if origin.strip()
+    ]
+
+
+CORS_ORIGINS = get_cors_origins()
+
+
+# =========================================================
+# APLICAÇÃO
+# =========================================================
+
+
+app = FastAPI(
+    title="MinecraftGuess API",
+    version="1.0.0",
+)
+
+
 app.add_middleware(
     CORSMiddleware,
 
-    allow_origins=[
-        "http://localhost:5173",
-        "http://127.0.0.1:5173",
-    ],
+    allow_origins=
+        CORS_ORIGINS,
 
     allow_credentials=True,
 
