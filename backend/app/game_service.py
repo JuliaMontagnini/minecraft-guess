@@ -265,6 +265,124 @@ def load_name_translations(
 # =========================================================
 
 
+PRIMARY_CRAFTING_MATERIALS = (
+    ("netherite", "netherita"),
+    ("diamond", "diamante"),
+    ("iron ingot", "ferro"),
+    ("gold ingot", "ouro"),
+    ("gold nugget", "ouro"),
+    ("copper ingot", "cobre"),
+    ("leather", "couro"),
+    ("cobblestone", "pedra"),
+    ("stone", "pedra"),
+    ("planks", "madeira"),
+    ("bamboo", "bambu"),
+)
+
+
+def _unique_values(
+    values,
+) -> list:
+    """Remove valores vazios e duplicados preservando a ordem."""
+
+    result = []
+    seen = set()
+
+    for value in values or []:
+        if value is None:
+            continue
+
+        marker = str(value).strip().casefold()
+
+        if not marker or marker in seen:
+            continue
+
+        seen.add(marker)
+        result.append(value)
+
+    return result
+
+
+def _recipe_ingredient_values(
+    recipe: dict | None,
+) -> list[str]:
+    """
+    Retorna os nomes reais dos ingredientes da receita.
+
+    A Astroworld usa um dicionário no formato:
+        {"D": "Diamond", "S": "Stick"}
+
+    Portanto usamos os VALORES, e não as letras/chaves do padrão.
+    """
+
+    if not isinstance(recipe, dict):
+        return []
+
+    ingredients = recipe.get(
+        "ingredients",
+        {},
+    )
+
+    if isinstance(ingredients, dict):
+        return [
+            str(value).strip()
+            for value in _unique_values(
+                ingredients.values()
+            )
+            if str(value).strip()
+        ]
+
+    if isinstance(ingredients, list):
+        return [
+            str(value).strip()
+            for value in _unique_values(
+                ingredients
+            )
+            if str(value).strip()
+        ]
+
+    return []
+
+
+def _primary_crafting_material(
+    ingredient_values: list[str],
+) -> str | None:
+    """
+    Identifica um material principal útil para a dica.
+
+    A intenção não é adivinhar a receita inteira, mas fornecer uma
+    característica clara, por exemplo: uma ferramenta cuja receita
+    usa Diamond pode informar que seu material principal é diamante.
+    """
+
+    normalized_ingredients = [
+        normalize_guess(value)
+        for value in ingredient_values
+    ]
+
+    for marker, translated_material in (
+        PRIMARY_CRAFTING_MATERIALS
+    ):
+        normalized_marker = normalize_guess(
+            marker
+        )
+
+        material_pattern = re.compile(
+            rf"(?<!\w)"
+            rf"{re.escape(normalized_marker)}"
+            rf"(?!\w)"
+        )
+
+        if any(
+            material_pattern.search(ingredient)
+            for ingredient
+            in normalized_ingredients
+        ):
+            return translated_material
+
+    return None
+
+
 def build_hints(
     entity_type: str,
     payload: dict,
@@ -275,9 +393,9 @@ def build_hints(
     """
     Gera dicas para uma entidade.
 
-    As dicas são criadas em ordem de prioridade.
-    Apenas as MAX_HINTS primeiras dicas seguras
-    são disponibilizadas.
+    As dicas são ordenadas por utilidade: primeiro entram atributos
+    mais concretos e distintivos; informações genéricas ficam para o
+    final. Apenas as MAX_HINTS primeiras dicas seguras são entregues.
     """
 
     name_translations = (
@@ -311,11 +429,21 @@ def build_hints(
         )
 
         if mob_type:
+            mob_type_text = (
+                "aquático"
+                if normalize_guess(
+                    str(mob_type)
+                ) == "water"
+                else translate_value(
+                    mob_type
+                )
+            )
+
             add_hint_if_safe(
                 hints,
                 (
                     "Sou um mob do tipo "
-                    f"{translate_value(mob_type)}."
+                    f"{mob_type_text}."
                 ),
                 secret_name,
             )
@@ -334,9 +462,11 @@ def build_hints(
                 secret_name,
             )
 
-        spawn_biomes = payload.get(
-            "spawnBiomes",
-            [],
+        spawn_biomes = _unique_values(
+            payload.get(
+                "spawnBiomes",
+                [],
+            )
         )
 
         if spawn_biomes:
@@ -361,9 +491,58 @@ def build_hints(
                 secret_name,
             )
 
-        weaknesses = payload.get(
-            "weaknesses",
+        drops = payload.get(
+            "drops",
             [],
+        )
+
+        drop_names = []
+
+        if isinstance(drops, list):
+            for drop in drops:
+                if not isinstance(drop, dict):
+                    continue
+
+                item_name = drop.get(
+                    "item"
+                )
+
+                if item_name:
+                    drop_names.append(
+                        item_name
+                    )
+
+        drop_names = _unique_values(
+            drop_names
+        )
+
+        if drop_names:
+            translated_drops = [
+                translate_game_text(
+                    item,
+                    name_translations,
+                )
+                for item
+                in drop_names[:2]
+            ]
+
+            add_hint_if_safe(
+                hints,
+                (
+                    "Ao ser derrotado, posso derrubar "
+                    + ", ".join(
+                        translated_drops
+                    )
+                    + "."
+                ),
+                secret_name,
+            )
+
+        weaknesses = _unique_values(
+            payload.get(
+                "weaknesses",
+                [],
+            )
         )
 
         if weaknesses:
@@ -388,22 +567,94 @@ def build_hints(
                 secret_name,
             )
 
+        damage = payload.get(
+            "damage"
+        )
+
+        if isinstance(damage, dict):
+            normal_damage = damage.get(
+                "normal"
+            )
+
+            if (
+                isinstance(
+                    normal_damage,
+                    (int, float),
+                )
+                and normal_damage > 0
+            ):
+                add_hint_if_safe(
+                    hints,
+                    (
+                        "Na dificuldade normal, "
+                        f"posso causar {normal_damage} "
+                        "pontos de dano."
+                    ),
+                    secret_name,
+                )
+
+        breedable = payload.get(
+            "breedable"
+        )
+
+        breeding_item = payload.get(
+            "breedingItem"
+        )
+
+        if breedable and breeding_item:
+            add_hint_if_safe(
+                hints,
+                (
+                    "Posso ser reproduzido usando "
+                    f"{translate_game_text(breeding_item, name_translations)}."
+                ),
+                secret_name,
+            )
+
         tameable = payload.get(
             "tameable"
         )
 
-        if tameable is not None:
-            tameable_hint = (
-                "Sou domesticável."
-                if tameable
-                else "Não sou domesticável."
-            )
-
+        if tameable:
             add_hint_if_safe(
                 hints,
-                tameable_hint,
+                "Posso ser domesticado.",
                 secret_name,
             )
+
+        xp_drop = payload.get(
+            "xpDrop"
+        )
+
+        if isinstance(xp_drop, dict):
+            minimum_xp = xp_drop.get(
+                "min"
+            )
+            maximum_xp = xp_drop.get(
+                "max"
+            )
+
+            if (
+                minimum_xp is not None
+                and maximum_xp is not None
+            ):
+                if minimum_xp == maximum_xp:
+                    xp_hint = (
+                        "Ao ser derrotado, posso conceder "
+                        f"{minimum_xp} pontos de experiência."
+                    )
+                else:
+                    xp_hint = (
+                        "Ao ser derrotado, posso conceder "
+                        f"entre {minimum_xp} e {maximum_xp} "
+                        "pontos de experiência."
+                    )
+
+                add_hint_if_safe(
+                    hints,
+                    xp_hint,
+                    secret_name,
+                )
 
     # =====================================================
     # BIOMAS
@@ -424,6 +675,120 @@ def build_hints(
                 secret_name,
             )
 
+        terrain = _unique_values(
+            payload.get(
+                "terrainFeatures",
+                [],
+            )
+        )
+
+        if terrain:
+            translated_terrain = (
+                translate_game_text(
+                    terrain[0],
+                    name_translations,
+                )
+            )
+
+            add_hint_if_safe(
+                hints,
+                (
+                    "Meu terreno se destaca por "
+                    f"{translated_terrain}."
+                ),
+                secret_name,
+            )
+
+        spawning_mobs = _unique_values(
+            payload.get(
+                "spawningMobs",
+                [],
+            )
+        )
+
+        if spawning_mobs:
+            translated_mobs = [
+                translate_game_text(
+                    mob,
+                    name_translations,
+                )
+                for mob
+                in spawning_mobs[:3]
+            ]
+
+            add_hint_if_safe(
+                hints,
+                (
+                    "Entre os mobs que podem aparecer "
+                    "em mim estão "
+                    + ", ".join(
+                        translated_mobs
+                    )
+                    + "."
+                ),
+                secret_name,
+            )
+
+        structures = _unique_values(
+            payload.get(
+                "structuresFound",
+                [],
+            )
+        )
+
+        if structures:
+            translated_structures = [
+                translate_game_text(
+                    structure,
+                    name_translations,
+                )
+                for structure
+                in structures[:2]
+            ]
+
+            add_hint_if_safe(
+                hints,
+                (
+                    "Estruturas que podem aparecer "
+                    "aqui incluem "
+                    + ", ".join(
+                        translated_structures
+                    )
+                    + "."
+                ),
+                secret_name,
+            )
+
+        unique_blocks = _unique_values(
+            payload.get(
+                "uniqueBlocks",
+                [],
+            )
+        )
+
+        if unique_blocks:
+            translated_blocks = [
+                translate_game_text(
+                    block,
+                    name_translations,
+                )
+                for block
+                in unique_blocks[:2]
+            ]
+
+            add_hint_if_safe(
+                hints,
+                (
+                    "Blocos característicos que podem "
+                    "aparecer em mim incluem "
+                    + ", ".join(
+                        translated_blocks
+                    )
+                    + "."
+                ),
+                secret_name,
+            )
+
         precipitation = payload.get(
             "precipitation"
         )
@@ -440,17 +805,22 @@ def build_hints(
                 translate_value(
                     precipitation
                 )
-                if precipitation
+                if precipitation is not None
+                else "desconhecida"
+            )
+
+            temperature_text = (
+                str(temperature)
+                if temperature is not None
                 else "desconhecida"
             )
 
             add_hint_if_safe(
                 hints,
                 (
-                    "Minha precipitação é "
-                    f"{precipitation_text} "
-                    "e minha temperatura é "
-                    f"{temperature}."
+                    "Meu clima tem precipitação "
+                    f"{precipitation_text} e "
+                    f"temperatura {temperature_text}."
                 ),
                 secret_name,
             )
@@ -465,75 +835,6 @@ def build_hints(
                 (
                     "Minha raridade é "
                     f"{translate_value(rarity)}."
-                ),
-                secret_name,
-            )
-
-        terrain = payload.get(
-            "terrainFeatures",
-            [],
-        )
-
-        if terrain:
-            translated_terrain = (
-                translate_game_text(
-                    terrain[0],
-                    name_translations,
-                )
-            )
-
-            add_hint_if_safe(
-                hints,
-                (
-                    "Uma característica do meu "
-                    "terreno é: "
-                    f"{translated_terrain}."
-                ),
-                secret_name,
-            )
-
-        structures = payload.get(
-            "structuresFound",
-            [],
-        )
-
-        if structures:
-            translated_structure = (
-                translate_game_text(
-                    structures[0],
-                    name_translations,
-                )
-            )
-
-            add_hint_if_safe(
-                hints,
-                (
-                    "Uma estrutura que pode "
-                    "aparecer aqui é "
-                    f"{translated_structure}."
-                ),
-                secret_name,
-            )
-
-        unique_blocks = payload.get(
-            "uniqueBlocks",
-            [],
-        )
-
-        if unique_blocks:
-            translated_block = (
-                translate_game_text(
-                    unique_blocks[0],
-                    name_translations,
-                )
-            )
-
-            add_hint_if_safe(
-                hints,
-                (
-                    "Um bloco característico "
-                    "que pode aparecer em mim é "
-                    f"{translated_block}."
                 ),
                 secret_name,
             )
@@ -557,56 +858,80 @@ def build_hints(
                 secret_name,
             )
 
-        stack_size = payload.get(
-            "stackSize"
+        recipe = payload.get(
+            "craftingRecipe"
         )
 
-        if stack_size is not None:
-            if stack_size == 1:
-                stack_hint = (
-                    "Não posso ser empilhado "
-                    "com outro item igual."
-                )
+        ingredient_values = (
+            _recipe_ingredient_values(
+                recipe
+            )
+        )
 
-            else:
-                stack_hint = (
-                    "Posso ser empilhado em "
-                    f"até {stack_size} unidades."
-                )
+        primary_material = (
+            _primary_crafting_material(
+                ingredient_values
+            )
+        )
 
+        if primary_material:
             add_hint_if_safe(
                 hints,
-                stack_hint,
+                (
+                    "Meu principal material de "
+                    "fabricação é "
+                    f"{primary_material}."
+                ),
                 secret_name,
             )
 
-        enchantable = payload.get(
-            "enchantable"
-        )
-
-        if enchantable is not None:
-            if enchantable:
-                enchant_hint = (
-                    "Posso receber "
-                    "encantamentos."
+        elif ingredient_values:
+            translated_ingredients = [
+                translate_game_text(
+                    ingredient,
+                    name_translations,
                 )
-
-            else:
-                enchant_hint = (
-                    "Normalmente não recebo "
-                    "encantamentos."
-                )
+                for ingredient
+                in ingredient_values[:3]
+            ]
 
             add_hint_if_safe(
                 hints,
-                enchant_hint,
+                (
+                    "Minha receita utiliza "
+                    + ", ".join(
+                        translated_ingredients
+                    )
+                    + "."
+                ),
                 secret_name,
             )
+
+        food_value = payload.get(
+            "foodValue"
+        )
+
+        if isinstance(food_value, dict):
+            hunger = food_value.get(
+                "hunger"
+            )
+
+            if hunger is not None:
+                add_hint_if_safe(
+                    hints,
+                    (
+                        "Sou consumível e recupero "
+                        f"{hunger} pontos de fome."
+                    ),
+                    secret_name,
+                )
 
         applicable_enchantments = (
-            payload.get(
-                "applicableEnchantments",
-                [],
+            _unique_values(
+                payload.get(
+                    "applicableEnchantments",
+                    [],
+                )
             )
         )
 
@@ -617,15 +942,14 @@ def build_hints(
                     name_translations,
                 )
                 for enchantment
-                in applicable_enchantments[:2]
+                in applicable_enchantments[:3]
             ]
 
             add_hint_if_safe(
                 hints,
                 (
-                    "Entre os encantamentos "
-                    "que podem ser usados em mim "
-                    "estão "
+                    "Entre os encantamentos que "
+                    "podem ser usados em mim estão "
                     + ", ".join(
                         translated_enchantments
                     )
@@ -634,9 +958,11 @@ def build_hints(
                 secret_name,
             )
 
-        obtained_by = payload.get(
-            "obtainedBy",
-            [],
+        obtained_by = _unique_values(
+            payload.get(
+                "obtainedBy",
+                [],
+            )
         )
 
         if obtained_by:
@@ -652,7 +978,7 @@ def build_hints(
             add_hint_if_safe(
                 hints,
                 (
-                    "Uma forma de me obter é: "
+                    "Posso ser obtido por "
                     + ", ".join(
                         translated_methods
                     )
@@ -661,81 +987,9 @@ def build_hints(
                 secret_name,
             )
 
-        durability = payload.get(
-            "durability"
-        )
-
-        if durability:
-            add_hint_if_safe(
-                hints,
-                (
-                    "Minha durabilidade é de "
-                    f"{durability} usos."
-                ),
-                secret_name,
-            )
-
-        food_value = payload.get(
-            "foodValue"
-        )
-
-        if food_value:
-            hunger = food_value.get(
-                "hunger"
-            )
-
-            saturation = (
-                food_value.get(
-                    "saturation"
-                )
-            )
-
-            if hunger is not None:
-                add_hint_if_safe(
-                    hints,
-                    (
-                        "Sou consumível e recupero "
-                        f"{hunger} pontos de fome."
-                    ),
-                    secret_name,
-                )
-
-            if saturation is not None:
-                add_hint_if_safe(
-                    hints,
-                    (
-                        "Meu valor de saturação "
-                        f"é {saturation}."
-                    ),
-                    secret_name,
-                )
-
-        fuel_value = payload.get(
-            "fuelValue"
-        )
-
-        if fuel_value:
-            add_hint_if_safe(
-                hints,
-                (
-                    "Também posso ser utilizado "
-                    "como combustível."
-                ),
-                secret_name,
-            )
-
-        recipe = payload.get(
-            "craftingRecipe"
-        )
-
-        if recipe:
+        if isinstance(recipe, dict):
             station = recipe.get(
                 "station"
-            )
-
-            ingredients = recipe.get(
-                "ingredients",
-                {},
             )
 
             if station:
@@ -749,40 +1003,64 @@ def build_hints(
                 add_hint_if_safe(
                     hints,
                     (
-                        "Minha fabricação utiliza "
+                        "Quando sou fabricado, utilizo "
                         f"{translated_station}."
                     ),
                     secret_name,
                 )
 
-            if ingredients:
-                ingredient_names = []
+        stack_size = payload.get(
+            "stackSize"
+        )
 
-                for ingredient in (
-                    list(
-                        ingredients.keys()
-                    )[:3]
-                ):
-                    ingredient_names.append(
-                        translate_game_text(
-                            ingredient,
-                            name_translations,
+        if stack_size is not None:
+            if stack_size == 1:
+                stack_hint = (
+                    "Sou um item não empilhável."
+                )
+            else:
+                stack_hint = (
+                    "Posso ser empilhado em até "
+                    f"{stack_size} unidades."
+                )
+
+            add_hint_if_safe(
+                hints,
+                stack_hint,
+                secret_name,
+            )
+
+        fuel_value = payload.get(
+            "fuelValue"
+        )
+
+        if fuel_value:
+            add_hint_if_safe(
+                hints,
+                "Também posso ser usado como combustível.",
+                secret_name,
+            )
+
+        # Só usamos a informação genérica de encantabilidade quando
+        # não existe uma lista mais específica de encantamentos.
+        if not applicable_enchantments:
+            enchantable = payload.get(
+                "enchantable"
+            )
+
+            if enchantable is not None:
+                add_hint_if_safe(
+                    hints,
+                    (
+                        "Posso receber encantamentos."
+                        if enchantable
+                        else (
+                            "Normalmente não recebo "
+                            "encantamentos."
                         )
-                    )
-
-                if ingredient_names:
-                    add_hint_if_safe(
-                        hints,
-                        (
-                            "Minha receita pode "
-                            "utilizar: "
-                            + ", ".join(
-                                ingredient_names
-                            )
-                            + "."
-                        ),
-                        secret_name,
-                    )
+                    ),
+                    secret_name,
+                )
 
     # =====================================================
     # ESTRUTURAS
@@ -1004,20 +1282,15 @@ def build_hints(
 
     # =====================================================
     # REMOVE VAZAMENTOS DO SEGREDO
-    #
-    # Neste ponto removemos dicas que possam revelar
-    # tanto o nome original em inglês quanto o nome pt-BR.
     # =====================================================
 
     hints = remove_secret_leaks(
         hints,
         protected_secret_names,
     )
+
     # =====================================================
     # FALLBACKS
-    #
-    # Só entram se os campos específicos acima não
-    # produzirem 5 dicas seguras.
     # =====================================================
 
     if len(hints) < MAX_HINTS:
@@ -1025,7 +1298,21 @@ def build_hints(
             "category"
         )
 
-        if category:
+        # Em vários mobs, `type` e `category` possuem o mesmo valor.
+        # Não usamos a categoria nesses casos para não desperdiçar uma
+        # dica repetindo "hostil", "passivo", etc.
+        repeated_mob_category = (
+            entity_type == "mob"
+            and category
+            and payload.get("type")
+            and normalize_guess(
+                str(category)
+            ) == normalize_guess(
+                str(payload.get("type"))
+            )
+        )
+
+        if category and not repeated_mob_category:
             add_hint_if_safe(
                 hints,
                 (
@@ -1057,6 +1344,7 @@ def build_hints(
     )
 
     return hints[:MAX_HINTS]
+
 
 # =========================================================
 # CRIAÇÃO DE PARTIDA

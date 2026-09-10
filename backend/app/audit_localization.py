@@ -19,7 +19,9 @@ from app.localization import (
 
 
 REPORT_FILE = (
-    Path(__file__).resolve().parent.parent
+    Path(__file__).resolve().parents[2]
+    / "docs"
+    / "audits"
     / "localization_audit_report.json"
 )
 
@@ -147,6 +149,11 @@ SUSPICIOUS_ENGLISH_WORDS = {
     "zombified",
     "during",
     "raids",
+    "milk",
+    "mining",
+    "removes",
+    "dense",
+    "flowers",
 }
 
 
@@ -564,6 +571,11 @@ def main():
         "issues":
             issues,
     }
+
+    REPORT_FILE.parent.mkdir(
+        parents=True,
+        exist_ok=True,
+    )
 
     with REPORT_FILE.open(
         "w",

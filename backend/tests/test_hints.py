@@ -395,3 +395,181 @@ def test_total_generated_hints_is_1520():
     )
 
     assert total_hints == 1520
+
+def test_diamond_item_has_material_hint():
+    payload = {
+        "category": "tool",
+        "stackSize": 1,
+        "enchantable": True,
+        "applicableEnchantments": [
+            "Efficiency",
+            "Mending",
+            "Fortune",
+        ],
+        "obtainedBy": [
+            "Crafting",
+        ],
+        "craftingRecipe": {
+            "station": "Crafting Table",
+            "ingredients": {
+                "D": "Diamond",
+                "S": "Stick",
+            },
+            "pattern": [
+                ["D", "D", "D"],
+                [None, "S", None],
+                [None, "S", None],
+            ],
+        },
+        "versionAdded": "1.0",
+    }
+
+    hints = build_hints(
+        entity_type="item",
+        payload=payload,
+        secret_name="Diamond Pickaxe",
+        name_translations={
+            "efficiency": "Eficiência",
+            "mending": "Remendo",
+            "fortune": "Fortuna",
+            "crafting table": "Bancada de Trabalho",
+        },
+    )
+
+    assert any(
+        "material de fabricacao e diamante"
+        in normalize_guess(hint)
+        for hint in hints
+    )
+
+    assert all(
+        "durabilidade"
+        not in normalize_guess(hint)
+        for hint in hints
+    )
+
+
+def test_mob_does_not_repeat_type_as_category():
+    payload = {
+        "type": "hostile",
+        "category": "hostile",
+        "hp": 20,
+        "spawnBiomes": [
+            "Plains",
+        ],
+        "drops": [
+            {
+                "item": "Rotten Flesh",
+            },
+        ],
+        "weaknesses": [
+            "Fire",
+        ],
+        "damage": {
+            "normal": 3,
+        },
+        "xpDrop": {
+            "min": 1,
+            "max": 3,
+        },
+        "versionAdded": "1.0",
+    }
+
+    hints = build_hints(
+        entity_type="mob",
+        payload=payload,
+        secret_name="Example Mob",
+        name_translations={},
+    )
+
+    hostile_mentions = sum(
+        "hostil" in normalize_guess(hint)
+        for hint in hints
+    )
+
+    assert hostile_mentions == 1
+
+    assert all(
+        "faco parte da categoria hostil"
+        not in normalize_guess(hint)
+        for hint in hints
+    )
+
+
+def test_biome_prioritizes_concrete_mob_information():
+    payload = {
+        "dimension": "overworld",
+        "terrainFeatures": [
+            "dense flowers",
+        ],
+        "spawningMobs": [
+            "Cow",
+            "Pig",
+            "Rabbit",
+        ],
+        "structuresFound": [],
+        "uniqueBlocks": [
+            "Allium",
+        ],
+        "precipitation": "rain",
+        "temperature": 0.7,
+        "rarity": "uncommon",
+        "versionAdded": "1.7.2",
+    }
+
+    hints = build_hints(
+        entity_type="biome",
+        payload=payload,
+        secret_name="Flower Forest",
+        name_translations={
+            "cow": "Vaca",
+            "pig": "Porco",
+            "rabbit": "Coelho",
+        },
+    )
+
+    assert any(
+        "grande concentracao de flores"
+        in normalize_guess(hint)
+        for hint in hints
+    )
+
+    assert any(
+        "entre os mobs que podem aparecer"
+        in normalize_guess(hint)
+        for hint in hints
+    )
+
+
+def test_item_recipe_uses_ingredient_values_not_symbols():
+    payload = {
+        "category": "miscellaneous",
+        "stackSize": 64,
+        "enchantable": False,
+        "applicableEnchantments": [],
+        "obtainedBy": [
+            "Crafting",
+        ],
+        "craftingRecipe": {
+            "station": "Crafting Table",
+            "ingredients": {
+                "X": "Stick",
+            },
+        },
+        "versionAdded": "1.0",
+    }
+
+    hints = build_hints(
+        entity_type="item",
+        payload=payload,
+        secret_name="Example Item",
+        name_translations={},
+    )
+
+    joined = " ".join(
+        normalize_guess(hint)
+        for hint in hints
+    )
+
+    assert "graveto" in joined
+    assert "receita utiliza x" not in joined

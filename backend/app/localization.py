@@ -287,6 +287,75 @@ VALUE_TRANSLATIONS = {
 
     "netherite ingot":
         "Barra de Netherita",
+
+    "diamond":
+        "Diamante",
+
+    "stick":
+        "Graveto",
+
+    "iron ingot":
+        "Barra de Ferro",
+
+    "gold ingot":
+        "Barra de Ouro",
+
+    "gold nugget":
+        "Pepita de Ouro",
+
+    "copper ingot":
+        "Barra de Cobre",
+
+    "leather":
+        "Couro",
+
+    "cobblestone":
+        "Pedregulho",
+
+    "stone":
+        "Pedra",
+
+    "oak planks":
+        "Tábuas de Carvalho",
+
+    "spruce planks":
+        "Tábuas de Pinheiro",
+
+    "birch planks":
+        "Tábuas de Bétula",
+
+    "jungle planks":
+        "Tábuas de Selva",
+
+    "acacia planks":
+        "Tábuas de Acácia",
+
+    "dark oak planks":
+        "Tábuas de Carvalho Escuro",
+
+    "mangrove planks":
+        "Tábuas de Mangue",
+
+    "cherry planks":
+        "Tábuas de Cerejeira",
+
+    "bamboo planks":
+        "Tábuas de Bambu",
+
+    "crimson planks":
+        "Tábuas Carmesim",
+
+    "warped planks":
+        "Tábuas Distorcidas",
+
+    "milk":
+        "leite",
+
+    "mining fatigue":
+        "fadiga de mineração",
+
+    "removes mining fatigue":
+        "remove a fadiga de mineração",
 }
 
 
@@ -390,6 +459,93 @@ TEXT_TRANSLATIONS = {
 
     "damages them":
         "causa dano",
+
+    "milk (removes mining fatigue)":
+        "leite (remove a fadiga de mineração)",
+
+    "dense flowers":
+        "grande concentração de flores",
+
+    # -----------------------------------------------------
+    # Termos restantes identificados pela auditoria
+    # -----------------------------------------------------
+    "massive packed ice pillars":
+        "enormes pilares de gelo compactado",
+
+    "dense bamboo stalks":
+        "bambuzal denso",
+
+    "dense birch trees":
+        "vegetação densa de bétulas",
+
+    "dense dark oak canopy":
+        "copa densa de carvalhos escuros",
+
+    "dense mangrove trees":
+        "vegetação densa de mangues",
+
+    "exposed stone mountain peaks":
+        "picos montanhosos com pedra exposta",
+
+    "steep stone cliffs":
+        "penhascos íngremes de pedra",
+
+    "snow block":
+        "Bloco de Neve",
+
+    "packed ice":
+        "Gelo Compactado",
+
+    "ice":
+        "Gelo",
+
+    "powder snow":
+        "Neve Fofa",
+
+    "jungle leaves":
+        "Folhas da Selva",
+
+    "egg":
+        "Ovo",
+
+    "milk bucket":
+        "Balde de Leite",
+
+    "chest":
+        "Baú",
+
+    "inventory crafting":
+        "Fabricação no Inventário",
+
+    "breeze rod":
+        "Bastão de Brisa",
+
+    "heavy core":
+        "Núcleo Pesado",
+
+    "spider eye":
+        "Olho de Aranha",
+
+    "bone":
+        "Osso",
+
+    "arrow of poison":
+        "Flecha de Veneno",
+
+    "string":
+        "Linha",
+
+    "raw cod":
+        "Bacalhau Cru",
+
+    "golden axe":
+        "Machado de Ouro",
+
+    "emerald":
+        "Esmeralda",
+
+    "iron axe":
+        "Machado de Ferro",
 
     "pointed dripstone stalactites and stalagmites":
         (

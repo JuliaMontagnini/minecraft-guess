@@ -163,3 +163,90 @@ def test_translate_structure_danger():
         "blocos de magma causam dano "
         "quando pisados"
     )
+
+def test_translate_milk_mining_fatigue():
+    result = translate_game_text(
+        "Milk (removes Mining Fatigue)",
+        {},
+    )
+
+    assert result == (
+        "leite (remove a fadiga de mineração)"
+    )
+
+
+def test_translate_dense_flowers():
+    result = translate_game_text(
+        "dense flowers",
+        {},
+    )
+
+    assert result == (
+        "grande concentração de flores"
+    )
+
+
+def test_remaining_audit_terms_are_translated():
+    cases = {
+        "massive packed ice pillars":
+            "enormes pilares de gelo compactado",
+        "dense bamboo stalks":
+            "bambuzal denso",
+        "dense birch trees":
+            "vegetação densa de bétulas",
+        "dense dark oak canopy":
+            "copa densa de carvalhos escuros",
+        "dense mangrove trees":
+            "vegetação densa de mangues",
+        "exposed stone mountain peaks":
+            "picos montanhosos com pedra exposta",
+        "steep stone cliffs":
+            "penhascos íngremes de pedra",
+        "Snow Block":
+            "Bloco de Neve",
+        "Packed Ice":
+            "Gelo Compactado",
+        "Ice":
+            "Gelo",
+        "Powder Snow":
+            "Neve Fofa",
+        "Jungle Leaves":
+            "Folhas da Selva",
+        "Egg":
+            "Ovo",
+        "Milk Bucket":
+            "Balde de Leite",
+        "Chest":
+            "Baú",
+        "Inventory Crafting":
+            "Fabricação no Inventário",
+        "Breeze Rod":
+            "Bastão de Brisa",
+        "Heavy Core":
+            "Núcleo Pesado",
+        "Spider Eye":
+            "Olho de Aranha",
+        "Bone":
+            "Osso",
+        "Arrow of Poison":
+            "Flecha de Veneno",
+        "String":
+            "Linha",
+        "Raw Cod":
+            "Bacalhau Cru",
+        "Golden Axe":
+            "Machado de Ouro",
+        "Emerald":
+            "Esmeralda",
+        "Iron Axe":
+            "Machado de Ferro",
+    }
+
+    for original, expected in cases.items():
+        assert (
+            translate_game_text(
+                original,
+                {},
+            )
+            == expected
+        )
