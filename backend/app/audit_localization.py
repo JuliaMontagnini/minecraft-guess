@@ -38,13 +38,22 @@ ALLOWED_TERMS = {
     "lava",
 }
 
-
-# Palavras que são um forte indício de que algum
-# trecho da API passou sem localização.
-#
 # Não precisa conter todas as palavras do inglês:
 # este conjunto serve como segunda camada da auditoria.
 SUSPICIOUS_ENGLISH_WORDS = {
+    "fatigue",
+    "fatigues",
+    "poison",
+    "poisons",
+    "weakness",
+    "weaknesses",
+    "slowness",
+    "slownesses",
+    "hunger",
+    "hungers",
+    "nausea",
+    "blindness",
+    "blindnesses",
     "helmet",
     "helmets",
     "chestplate",
@@ -440,10 +449,6 @@ def main():
             ):
                 reasons = []
 
-                # ---------------------------------
-                # 1. Nomes de entidades em inglês
-                # ---------------------------------
-
                 original_names = (
                     find_original_entity_names(
                         hint,
@@ -461,10 +466,6 @@ def main():
                                 original_names,
                         }
                     )
-
-                # ---------------------------------
-                # 2. Valores que já sabemos traduzir
-                # ---------------------------------
 
                 raw_fragments = (
                     find_translatable_payload_fragments(
@@ -484,10 +485,6 @@ def main():
                                 raw_fragments,
                         }
                     )
-
-                # ---------------------------------
-                # 3. Palavras provavelmente inglesas
-                # ---------------------------------
 
                 english_words = (
                     find_english_words(
@@ -554,10 +551,6 @@ def main():
                 }
             )
 
-    # ---------------------------------------------
-    # Salvar relatório
-    # ---------------------------------------------
-
     report = {
         "entities_checked":
             len(entities),
@@ -582,10 +575,6 @@ def main():
             ensure_ascii=False,
             indent=2,
         )
-
-    # ---------------------------------------------
-    # Mostrar resultado
-    # ---------------------------------------------
 
     print("=" * 70)
     print(
