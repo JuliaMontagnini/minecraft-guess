@@ -1,0 +1,2434 @@
+[
+  {
+    "entity_type": "mob",
+    "entity_name": "Allay",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_allay.png",
+    "file_name": "EntitySprite allay.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Armadillo",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_armadillo.png",
+    "file_name": "EntitySprite armadillo.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Axolotl",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_axolotl.png",
+    "file_name": "EntitySprite axolotl.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Bat",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_bat.png",
+    "file_name": "EntitySprite bat.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Bee",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_bee.png",
+    "file_name": "EntitySprite bee.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Blaze",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_blaze.png",
+    "file_name": "EntitySprite blaze.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Bogged",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_bogged.png",
+    "file_name": "EntitySprite bogged.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Breeze",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_breeze.png",
+    "file_name": "EntitySprite breeze.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Camel",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_camel.png",
+    "file_name": "EntitySprite camel.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Cat",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_cat.png",
+    "file_name": "EntitySprite cat.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Cave Spider",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_cave-spider.png",
+    "file_name": "EntitySprite cave-spider.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Chicken",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_chicken.png",
+    "file_name": "EntitySprite chicken.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Cod",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_cod.png",
+    "file_name": "EntitySprite cod.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Cow",
+    "source_page_url": "https://minecraft.wiki/w/File:Cow_JE7_BE4.png",
+    "file_name": "Cow_JE7_BE4.png",
+    "license_note": "This file (or parts of it) is copyright Mojang Studios",
+    "strategy": "manual_override"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Creeper",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_creeper.png",
+    "file_name": "EntitySprite creeper.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Dolphin",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_dolphin.png",
+    "file_name": "EntitySprite dolphin.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Donkey",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_donkey.png",
+    "file_name": "EntitySprite donkey.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Drowned",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_drowned.png",
+    "file_name": "EntitySprite drowned.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Elder Guardian",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_elder-guardian.png",
+    "file_name": "EntitySprite elder-guardian.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Ender Dragon",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_ender-dragon.png",
+    "file_name": "EntitySprite ender-dragon.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Enderman",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_enderman.png",
+    "file_name": "EntitySprite enderman.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Endermite",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_endermite.png",
+    "file_name": "EntitySprite endermite.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Evoker",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_evoker.png",
+    "file_name": "EntitySprite evoker.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Fox",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_fox.png",
+    "file_name": "EntitySprite fox.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Frog",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_frog.png",
+    "file_name": "EntitySprite frog.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Ghast",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_ghast.png",
+    "file_name": "EntitySprite ghast.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Glow Squid",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_glow-squid.png",
+    "file_name": "EntitySprite glow-squid.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Goat",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_goat.png",
+    "file_name": "EntitySprite goat.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Guardian",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_guardian.png",
+    "file_name": "EntitySprite guardian.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Hoglin",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_hoglin.png",
+    "file_name": "EntitySprite hoglin.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Horse",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_horse.png",
+    "file_name": "EntitySprite horse.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Husk",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_husk.png",
+    "file_name": "EntitySprite husk.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Iron Golem",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_iron-golem.png",
+    "file_name": "EntitySprite iron-golem.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Llama",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_llama.png",
+    "file_name": "EntitySprite llama.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Magma Cube",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_magma-cube.png",
+    "file_name": "EntitySprite magma-cube.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Mooshroom",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_mooshroom.png",
+    "file_name": "EntitySprite mooshroom.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Mule",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_mule.png",
+    "file_name": "EntitySprite mule.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Ocelot",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_ocelot.png",
+    "file_name": "EntitySprite ocelot.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Panda",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_panda.png",
+    "file_name": "EntitySprite panda.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Parrot",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_parrot.png",
+    "file_name": "EntitySprite parrot.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Phantom",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_phantom.png",
+    "file_name": "EntitySprite phantom.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Pig",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_pig.png",
+    "file_name": "EntitySprite pig.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Piglin",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_piglin.png",
+    "file_name": "EntitySprite piglin.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Piglin Brute",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_piglin-brute.png",
+    "file_name": "EntitySprite piglin-brute.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Pillager",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_pillager.png",
+    "file_name": "EntitySprite pillager.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Polar Bear",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_polar-bear.png",
+    "file_name": "EntitySprite polar-bear.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Pufferfish",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_pufferfish.png",
+    "file_name": "EntitySprite pufferfish.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Rabbit",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_rabbit.png",
+    "file_name": "EntitySprite rabbit.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Ravager",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_ravager.png",
+    "file_name": "EntitySprite ravager.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Salmon",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_salmon.png",
+    "file_name": "EntitySprite salmon.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Sheep",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_sheep.png",
+    "file_name": "EntitySprite sheep.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Shulker",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_shulker.png",
+    "file_name": "EntitySprite shulker.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Silverfish",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_silverfish.png",
+    "file_name": "EntitySprite silverfish.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Skeleton",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_skeleton.png",
+    "file_name": "EntitySprite skeleton.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Slime",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_slime.png",
+    "file_name": "EntitySprite slime.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Sniffer",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_sniffer.png",
+    "file_name": "EntitySprite sniffer.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Snow Golem",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_snow-golem.png",
+    "file_name": "EntitySprite snow-golem.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Spider",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_spider.png",
+    "file_name": "EntitySprite spider.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Squid",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_squid.png",
+    "file_name": "EntitySprite squid.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Stray",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_stray.png",
+    "file_name": "EntitySprite stray.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Strider",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_strider.png",
+    "file_name": "EntitySprite strider.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Tadpole",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_tadpole.png",
+    "file_name": "EntitySprite tadpole.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Trader Llama",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_trader-llama.png",
+    "file_name": "EntitySprite trader-llama.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Tropical Fish",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_tropical-fish.png",
+    "file_name": "EntitySprite tropical-fish.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Turtle",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_turtle.png",
+    "file_name": "EntitySprite turtle.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Vex",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_vex.png",
+    "file_name": "EntitySprite vex.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Vindicator",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_vindicator.png",
+    "file_name": "EntitySprite vindicator.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Wandering Trader",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_wandering-trader.png",
+    "file_name": "EntitySprite wandering-trader.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Warden",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_warden.png",
+    "file_name": "EntitySprite warden.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Witch",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_witch.png",
+    "file_name": "EntitySprite witch.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Wither",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_wither.png",
+    "file_name": "EntitySprite wither.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Wither Skeleton",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_wither-skeleton.png",
+    "file_name": "EntitySprite wither-skeleton.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Wolf",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_wolf.png",
+    "file_name": "EntitySprite wolf.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Zoglin",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_zoglin.png",
+    "file_name": "EntitySprite zoglin.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Zombie",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_zombie.png",
+    "file_name": "EntitySprite zombie.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "mob",
+    "entity_name": "Zombified Piglin",
+    "source_page_url": "https://minecraft.wiki/w/File:EntitySprite_zombified-piglin.png",
+    "file_name": "EntitySprite zombified-piglin.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "biome",
+    "entity_name": "Badlands",
+    "source_page_url": "https://minecraft.wiki/w/File:BiomeSprite_badlands.png",
+    "file_name": "BiomeSprite badlands.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "biome",
+    "entity_name": "Bamboo Jungle",
+    "source_page_url": "https://minecraft.wiki/w/File:BiomeSprite_bamboo-jungle.png",
+    "file_name": "BiomeSprite bamboo-jungle.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "biome",
+    "entity_name": "Basalt Deltas",
+    "source_page_url": "https://minecraft.wiki/w/File:BiomeSprite_basalt-deltas.png",
+    "file_name": "BiomeSprite basalt-deltas.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "biome",
+    "entity_name": "Beach",
+    "source_page_url": "https://minecraft.wiki/w/File:BiomeSprite_beach.png",
+    "file_name": "BiomeSprite beach.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "biome",
+    "entity_name": "Birch Forest",
+    "source_page_url": "https://minecraft.wiki/w/File:BiomeSprite_birch-forest.png",
+    "file_name": "BiomeSprite birch-forest.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "biome",
+    "entity_name": "Cherry Grove",
+    "source_page_url": "https://minecraft.wiki/w/File:BiomeSprite_cherry-grove.png",
+    "file_name": "BiomeSprite cherry-grove.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "biome",
+    "entity_name": "Cold Ocean",
+    "source_page_url": "https://minecraft.wiki/w/File:BiomeSprite_cold-ocean.png",
+    "file_name": "BiomeSprite cold-ocean.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "biome",
+    "entity_name": "Crimson Forest",
+    "source_page_url": "https://minecraft.wiki/w/File:BiomeSprite_crimson-forest.png",
+    "file_name": "BiomeSprite crimson-forest.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "biome",
+    "entity_name": "Dark Forest",
+    "source_page_url": "https://minecraft.wiki/w/File:BiomeSprite_dark-forest.png",
+    "file_name": "BiomeSprite dark-forest.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "biome",
+    "entity_name": "Deep Cold Ocean",
+    "source_page_url": "https://minecraft.wiki/w/File:BiomeSprite_deep-cold-ocean.png",
+    "file_name": "BiomeSprite deep-cold-ocean.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "biome",
+    "entity_name": "Deep Dark",
+    "source_page_url": "https://minecraft.wiki/w/File:BiomeSprite_deep-dark.png",
+    "file_name": "BiomeSprite deep-dark.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "biome",
+    "entity_name": "Deep Frozen Ocean",
+    "source_page_url": "https://minecraft.wiki/w/File:BiomeSprite_deep-frozen-ocean.png",
+    "file_name": "BiomeSprite deep-frozen-ocean.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "biome",
+    "entity_name": "Deep Lukewarm Ocean",
+    "source_page_url": "https://minecraft.wiki/w/File:BiomeSprite_deep-lukewarm-ocean.png",
+    "file_name": "BiomeSprite deep-lukewarm-ocean.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "biome",
+    "entity_name": "Deep Ocean",
+    "source_page_url": "https://minecraft.wiki/w/File:BiomeSprite_deep-ocean.png",
+    "file_name": "BiomeSprite deep-ocean.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "biome",
+    "entity_name": "Desert",
+    "source_page_url": "https://minecraft.wiki/w/File:BiomeSprite_desert.png",
+    "file_name": "BiomeSprite desert.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "biome",
+    "entity_name": "Dripstone Caves",
+    "source_page_url": "https://minecraft.wiki/w/File:BiomeSprite_dripstone-caves.png",
+    "file_name": "BiomeSprite dripstone-caves.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "biome",
+    "entity_name": "End Barrens",
+    "source_page_url": "https://minecraft.wiki/w/File:BiomeSprite_end-barrens.png",
+    "file_name": "BiomeSprite end-barrens.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "biome",
+    "entity_name": "End Highlands",
+    "source_page_url": "https://minecraft.wiki/w/File:BiomeSprite_end-highlands.png",
+    "file_name": "BiomeSprite end-highlands.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "biome",
+    "entity_name": "End Midlands",
+    "source_page_url": "https://minecraft.wiki/w/File:BiomeSprite_end-midlands.png",
+    "file_name": "BiomeSprite end-midlands.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "biome",
+    "entity_name": "Eroded Badlands",
+    "source_page_url": "https://minecraft.wiki/w/File:BiomeSprite_eroded-badlands.png",
+    "file_name": "BiomeSprite eroded-badlands.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "biome",
+    "entity_name": "Flower Forest",
+    "source_page_url": "https://minecraft.wiki/w/File:BiomeSprite_flower-forest.png",
+    "file_name": "BiomeSprite flower-forest.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "biome",
+    "entity_name": "Forest",
+    "source_page_url": "https://minecraft.wiki/w/File:BiomeSprite_forest.png",
+    "file_name": "BiomeSprite forest.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "biome",
+    "entity_name": "Frozen Ocean",
+    "source_page_url": "https://minecraft.wiki/w/File:BiomeSprite_frozen-ocean.png",
+    "file_name": "BiomeSprite frozen-ocean.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "biome",
+    "entity_name": "Frozen Peaks",
+    "source_page_url": "https://minecraft.wiki/w/File:BiomeSprite_frozen-peaks.png",
+    "file_name": "BiomeSprite frozen-peaks.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "biome",
+    "entity_name": "Frozen River",
+    "source_page_url": "https://minecraft.wiki/w/File:BiomeSprite_frozen-river.png",
+    "file_name": "BiomeSprite frozen-river.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "biome",
+    "entity_name": "Grove",
+    "source_page_url": "https://minecraft.wiki/w/File:BiomeSprite_grove.png",
+    "file_name": "BiomeSprite grove.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "biome",
+    "entity_name": "Ice Spikes",
+    "source_page_url": "https://minecraft.wiki/w/File:BiomeSprite_ice-spikes.png",
+    "file_name": "BiomeSprite ice-spikes.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "biome",
+    "entity_name": "Jagged Peaks",
+    "source_page_url": "https://minecraft.wiki/w/File:BiomeSprite_jagged-peaks.png",
+    "file_name": "BiomeSprite jagged-peaks.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "biome",
+    "entity_name": "Jungle",
+    "source_page_url": "https://minecraft.wiki/w/File:BiomeSprite_jungle.png",
+    "file_name": "BiomeSprite jungle.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "biome",
+    "entity_name": "Lukewarm Ocean",
+    "source_page_url": "https://minecraft.wiki/w/File:BiomeSprite_lukewarm-ocean.png",
+    "file_name": "BiomeSprite lukewarm-ocean.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "biome",
+    "entity_name": "Lush Caves",
+    "source_page_url": "https://minecraft.wiki/w/File:BiomeSprite_lush-caves.png",
+    "file_name": "BiomeSprite lush-caves.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "biome",
+    "entity_name": "Mangrove Swamp",
+    "source_page_url": "https://minecraft.wiki/w/File:BiomeSprite_mangrove-swamp.png",
+    "file_name": "BiomeSprite mangrove-swamp.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "biome",
+    "entity_name": "Meadow",
+    "source_page_url": "https://minecraft.wiki/w/File:BiomeSprite_meadow.png",
+    "file_name": "BiomeSprite meadow.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "biome",
+    "entity_name": "Mushroom Fields",
+    "source_page_url": "https://minecraft.wiki/w/File:BiomeSprite_mushroom-fields.png",
+    "file_name": "BiomeSprite mushroom-fields.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "biome",
+    "entity_name": "Nether Wastes",
+    "source_page_url": "https://minecraft.wiki/w/File:BiomeSprite_nether-wastes.png",
+    "file_name": "BiomeSprite nether-wastes.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "biome",
+    "entity_name": "Ocean",
+    "source_page_url": "https://minecraft.wiki/w/File:BiomeSprite_ocean.png",
+    "file_name": "BiomeSprite ocean.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "biome",
+    "entity_name": "Old Growth Birch Forest",
+    "source_page_url": "https://minecraft.wiki/w/File:BiomeSprite_old-growth-birch-forest.png",
+    "file_name": "BiomeSprite old-growth-birch-forest.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "biome",
+    "entity_name": "Old Growth Pine Taiga",
+    "source_page_url": "https://minecraft.wiki/w/File:BiomeSprite_old-growth-pine-taiga.png",
+    "file_name": "BiomeSprite old-growth-pine-taiga.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "biome",
+    "entity_name": "Old Growth Spruce Taiga",
+    "source_page_url": "https://minecraft.wiki/w/File:BiomeSprite_old-growth-spruce-taiga.png",
+    "file_name": "BiomeSprite old-growth-spruce-taiga.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "biome",
+    "entity_name": "Pale Garden",
+    "source_page_url": "https://minecraft.wiki/w/File:BiomeSprite_pale-garden.png",
+    "file_name": "BiomeSprite pale-garden.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "biome",
+    "entity_name": "Plains",
+    "source_page_url": "https://minecraft.wiki/w/File:Plains.png",
+    "file_name": "Plains.png",
+    "license_note": "This file (or parts of it) is copyright Mojang Studios",
+    "strategy": "manual_override"
+  },
+  {
+    "entity_type": "biome",
+    "entity_name": "River",
+    "source_page_url": "https://minecraft.wiki/w/File:BiomeSprite_river.png",
+    "file_name": "BiomeSprite river.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "biome",
+    "entity_name": "Savanna",
+    "source_page_url": "https://minecraft.wiki/w/File:BiomeSprite_savanna.png",
+    "file_name": "BiomeSprite savanna.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "biome",
+    "entity_name": "Savanna Plateau",
+    "source_page_url": "https://minecraft.wiki/w/File:BiomeSprite_savanna-plateau.png",
+    "file_name": "BiomeSprite savanna-plateau.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "biome",
+    "entity_name": "Small End Islands",
+    "source_page_url": "https://minecraft.wiki/w/File:BiomeSprite_small-end-islands.png",
+    "file_name": "BiomeSprite small-end-islands.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "biome",
+    "entity_name": "Snowy Beach",
+    "source_page_url": "https://minecraft.wiki/w/File:BiomeSprite_snowy-beach.png",
+    "file_name": "BiomeSprite snowy-beach.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "biome",
+    "entity_name": "Snowy Plains",
+    "source_page_url": "https://minecraft.wiki/w/File:BiomeSprite_snowy-plains.png",
+    "file_name": "BiomeSprite snowy-plains.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "biome",
+    "entity_name": "Snowy Slopes",
+    "source_page_url": "https://minecraft.wiki/w/File:BiomeSprite_snowy-slopes.png",
+    "file_name": "BiomeSprite snowy-slopes.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "biome",
+    "entity_name": "Snowy Taiga",
+    "source_page_url": "https://minecraft.wiki/w/File:BiomeSprite_snowy-taiga.png",
+    "file_name": "BiomeSprite snowy-taiga.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "biome",
+    "entity_name": "Soul Sand Valley",
+    "source_page_url": "https://minecraft.wiki/w/File:BiomeSprite_soul-sand-valley.png",
+    "file_name": "BiomeSprite soul-sand-valley.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "biome",
+    "entity_name": "Sparse Jungle",
+    "source_page_url": "https://minecraft.wiki/w/File:BiomeSprite_sparse-jungle.png",
+    "file_name": "BiomeSprite sparse-jungle.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "biome",
+    "entity_name": "Stony Peaks",
+    "source_page_url": "https://minecraft.wiki/w/File:BiomeSprite_stony-peaks.png",
+    "file_name": "BiomeSprite stony-peaks.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "biome",
+    "entity_name": "Stony Shore",
+    "source_page_url": "https://minecraft.wiki/w/File:BiomeSprite_stony-shore.png",
+    "file_name": "BiomeSprite stony-shore.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "biome",
+    "entity_name": "Sunflower Plains",
+    "source_page_url": "https://minecraft.wiki/w/File:BiomeSprite_sunflower-plains.png",
+    "file_name": "BiomeSprite sunflower-plains.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "biome",
+    "entity_name": "Swamp",
+    "source_page_url": "https://minecraft.wiki/w/File:BiomeSprite_swamp.png",
+    "file_name": "BiomeSprite swamp.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "biome",
+    "entity_name": "Taiga",
+    "source_page_url": "https://minecraft.wiki/w/File:BiomeSprite_taiga.png",
+    "file_name": "BiomeSprite taiga.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "biome",
+    "entity_name": "The End",
+    "source_page_url": "https://minecraft.wiki/w/File:BiomeSprite_the-end.png",
+    "file_name": "BiomeSprite the-end.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "biome",
+    "entity_name": "Warm Ocean",
+    "source_page_url": "https://minecraft.wiki/w/File:BiomeSprite_warm-ocean.png",
+    "file_name": "BiomeSprite warm-ocean.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "biome",
+    "entity_name": "Warped Forest",
+    "source_page_url": "https://minecraft.wiki/w/File:BiomeSprite_warped-forest.png",
+    "file_name": "BiomeSprite warped-forest.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "biome",
+    "entity_name": "Windswept Forest",
+    "source_page_url": "https://minecraft.wiki/w/File:BiomeSprite_windswept-forest.png",
+    "file_name": "BiomeSprite windswept-forest.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "biome",
+    "entity_name": "Windswept Gravelly Hills",
+    "source_page_url": "https://minecraft.wiki/w/File:BiomeSprite_windswept-gravelly-hills.png",
+    "file_name": "BiomeSprite windswept-gravelly-hills.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "biome",
+    "entity_name": "Windswept Hills",
+    "source_page_url": "https://minecraft.wiki/w/File:BiomeSprite_windswept-hills.png",
+    "file_name": "BiomeSprite windswept-hills.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "biome",
+    "entity_name": "Windswept Savanna",
+    "source_page_url": "https://minecraft.wiki/w/File:BiomeSprite_windswept-savanna.png",
+    "file_name": "BiomeSprite windswept-savanna.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "biome",
+    "entity_name": "Wooded Badlands",
+    "source_page_url": "https://minecraft.wiki/w/File:BiomeSprite_wooded-badlands.png",
+    "file_name": "BiomeSprite wooded-badlands.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Anvil",
+    "source_page_url": "https://minecraft.wiki/w/File:Anvil_(N)_JE3.png",
+    "file_name": "Anvil_(N)_JE3.png",
+    "license_note": "This file (or parts of it) is copyright Mojang Studios",
+    "strategy": "manual_override"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Arrow",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_arrow.png",
+    "file_name": "ItemSprite arrow.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Beacon",
+    "source_page_url": "https://minecraft.wiki/w/File:Beacon_JE6_BE2.png",
+    "file_name": "Beacon JE6 BE2.png",
+    "license_note": "This file (or parts of it) is copyright Mojang Studios",
+    "strategy": "manual_override"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Blast Furnace",
+    "source_page_url": "https://minecraft.wiki/w/File:Blast_Furnace_(S)_JE1.png",
+    "file_name": "Blast Furnace (S) JE1.png",
+    "license_note": "This file (or parts of it) is copyright Mojang Studios",
+    "strategy": "manual_override"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Bow",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_bow.png",
+    "file_name": "ItemSprite bow.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Bread",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_bread.png",
+    "file_name": "ItemSprite bread.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Brewing Stand",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_brewing-stand.png",
+    "file_name": "ItemSprite brewing-stand.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Brush",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_brush.png",
+    "file_name": "ItemSprite brush.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Cake",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_cake.png",
+    "file_name": "ItemSprite cake.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Cartography Table",
+    "source_page_url": "https://minecraft.wiki/w/File:Cartography_Table_JE3_BE2.png",
+    "file_name": "Cartography Table JE3 BE2.png",
+    "license_note": "This file (or parts of it) is copyright Mojang Studios",
+    "strategy": "manual_override"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Chest Minecart",
+    "source_page_url": "https://minecraft.wiki/w/File:Minecart_with_Chest_JE4_BE2.png",
+    "file_name": "Minecart with Chest JE4 BE2.png",
+    "license_note": "This file (or parts of it) is copyright Mojang Studios",
+    "strategy": "manual_override"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Chorus Fruit",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_chorus-fruit.png",
+    "file_name": "ItemSprite chorus-fruit.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Cooked Beef",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_cooked-beef.png",
+    "file_name": "ItemSprite cooked-beef.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Cooked Chicken",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_cooked-chicken.png",
+    "file_name": "ItemSprite cooked-chicken.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Cooked Porkchop",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_cooked-porkchop.png",
+    "file_name": "ItemSprite cooked-porkchop.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Crafting Table",
+    "source_page_url": "https://minecraft.wiki/w/File:Crafting_Table_JE4_BE3.png",
+    "file_name": "Crafting Table JE4 BE3.png",
+    "license_note": "This file (or parts of it) is copyright Mojang Studios",
+    "strategy": "manual_override"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Crossbow",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_crossbow.png",
+    "file_name": "ItemSprite crossbow.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Diamond Axe",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_diamond-axe.png",
+    "file_name": "ItemSprite diamond-axe.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Diamond Boots",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_diamond-boots.png",
+    "file_name": "ItemSprite diamond-boots.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Diamond Chestplate",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_diamond-chestplate.png",
+    "file_name": "ItemSprite diamond-chestplate.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Diamond Helmet",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_diamond-helmet.png",
+    "file_name": "ItemSprite diamond-helmet.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Diamond Hoe",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_diamond-hoe.png",
+    "file_name": "ItemSprite diamond-hoe.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Diamond Leggings",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_diamond-leggings.png",
+    "file_name": "ItemSprite diamond-leggings.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Diamond Pickaxe",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_diamond-pickaxe.png",
+    "file_name": "ItemSprite diamond-pickaxe.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Diamond Shovel",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_diamond-shovel.png",
+    "file_name": "ItemSprite diamond-shovel.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Diamond Sword",
+    "source_page_url": "https://minecraft.wiki/w/File:Diamond_Sword_JE3_BE3.png",
+    "file_name": "Diamond_Sword_JE3_BE3.png",
+    "license_note": "This file (or parts of it) is copyright Mojang Studios",
+    "strategy": "manual_override"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Dispenser",
+    "source_page_url": "https://minecraft.wiki/w/File:Dispenser_(S)_JE4.png",
+    "file_name": "Dispenser (S) JE4.png",
+    "license_note": "This file (or parts of it) is copyright Mojang Studios",
+    "strategy": "manual_override"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Dropper",
+    "source_page_url": "https://minecraft.wiki/w/File:Dropper_(S)_JE3.png",
+    "file_name": "Dropper (S) JE3.png",
+    "license_note": "This file (or parts of it) is copyright Mojang Studios",
+    "strategy": "manual_override"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Echo Shard",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_echo-shard.png",
+    "file_name": "ItemSprite echo-shard.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Elytra",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_elytra.png",
+    "file_name": "ItemSprite elytra.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Enchanted Golden Apple",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_enchanted-golden-apple.png",
+    "file_name": "ItemSprite enchanted-golden-apple.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Enchanting Table",
+    "source_page_url": "https://minecraft.wiki/w/File:Enchanting_Table_JE1_BE1.png",
+    "file_name": "Enchanting Table JE1 BE1.png",
+    "license_note": "This file (or parts of it) is copyright Mojang Studios",
+    "strategy": "manual_override"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Ender Pearl",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_ender-pearl.png",
+    "file_name": "ItemSprite ender-pearl.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Eye of Ender",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_eye-of-ender.png",
+    "file_name": "ItemSprite eye-of-ender.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Fishing Rod",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_fishing-rod.png",
+    "file_name": "ItemSprite fishing-rod.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Flint and Steel",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_flint-and-steel.png",
+    "file_name": "ItemSprite flint-and-steel.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Furnace",
+    "source_page_url": "https://minecraft.wiki/w/File:Furnace_(S)_JE4.png",
+    "file_name": "Furnace (S) JE4.png",
+    "license_note": "This file (or parts of it) is copyright Mojang Studios",
+    "strategy": "manual_override"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Goat Horn",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_goat-horn.png",
+    "file_name": "ItemSprite goat-horn.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Golden Apple",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_golden-apple.png",
+    "file_name": "ItemSprite golden-apple.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Golden Carrot",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_golden-carrot.png",
+    "file_name": "ItemSprite golden-carrot.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Golden Pickaxe",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_golden-pickaxe.png",
+    "file_name": "ItemSprite golden-pickaxe.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Grindstone",
+    "source_page_url": "https://minecraft.wiki/w/File:Grindstone_(floor)_(N).png",
+    "file_name": "Grindstone (floor) (N).png",
+    "license_note": "This file (or parts of it) is copyright Mojang Studios",
+    "strategy": "manual_override"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Heart of the Sea",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_heart-of-the-sea.png",
+    "file_name": "ItemSprite heart-of-the-sea.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Honey Bottle",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_honey-bottle.png",
+    "file_name": "ItemSprite honey-bottle.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Hopper",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_hopper.png",
+    "file_name": "ItemSprite hopper.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Iron Pickaxe",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_iron-pickaxe.png",
+    "file_name": "ItemSprite iron-pickaxe.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Lead",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_lead.png",
+    "file_name": "ItemSprite lead.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Lever",
+    "source_page_url": "https://minecraft.wiki/w/File:Floor_Lever_(S)_JE1.png",
+    "file_name": "Floor Lever (S) JE1.png",
+    "license_note": "This file (or parts of it) is copyright Mojang Studios",
+    "strategy": "manual_override"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Lodestone",
+    "source_page_url": "https://minecraft.wiki/w/File:Lodestone_JE1_BE1.png",
+    "file_name": "Lodestone JE1 BE1.png",
+    "license_note": "This file (or parts of it) is copyright Mojang Studios",
+    "strategy": "manual_override"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Loom",
+    "source_page_url": "https://minecraft.wiki/w/File:Loom_(S)_JE1_BE1.png",
+    "file_name": "Loom (S) JE1 BE1.png",
+    "license_note": "This file (or parts of it) is copyright Mojang Studios",
+    "strategy": "manual_override"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Mace",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_mace.png",
+    "file_name": "ItemSprite mace.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Minecart",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_minecart.png",
+    "file_name": "ItemSprite minecart.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Music Disc - 13",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_music-disc-13.png",
+    "file_name": "ItemSprite music-disc-13.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Music Disc - Cat",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_music-disc-cat.png",
+    "file_name": "ItemSprite music-disc-cat.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Music Disc - Pigstep",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_music-disc-pigstep.png",
+    "file_name": "ItemSprite music-disc-pigstep.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Name Tag",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_name-tag.png",
+    "file_name": "ItemSprite name-tag.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Nether Star",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_nether-star.png",
+    "file_name": "ItemSprite nether-star.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Netherite Boots",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_netherite-boots.png",
+    "file_name": "ItemSprite netherite-boots.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Netherite Chestplate",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_netherite-chestplate.png",
+    "file_name": "ItemSprite netherite-chestplate.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Netherite Helmet",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_netherite-helmet.png",
+    "file_name": "ItemSprite netherite-helmet.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Netherite Leggings",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_netherite-leggings.png",
+    "file_name": "ItemSprite netherite-leggings.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Netherite Pickaxe",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_netherite-pickaxe.png",
+    "file_name": "ItemSprite netherite-pickaxe.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Netherite Sword",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_netherite-sword.png",
+    "file_name": "ItemSprite netherite-sword.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Oak Boat",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_oak-boat.png",
+    "file_name": "ItemSprite oak-boat.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Observer",
+    "source_page_url": "https://minecraft.wiki/w/File:Observer_JE4_BE3.png",
+    "file_name": "Observer JE4 BE3.png",
+    "license_note": "This file (or parts of it) is copyright Mojang Studios",
+    "strategy": "manual_override"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Ominous Trial Key",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_ominous-trial-key.png",
+    "file_name": "ItemSprite ominous-trial-key.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Piston",
+    "source_page_url": "https://minecraft.wiki/w/File:Piston_(U)_JE3.png",
+    "file_name": "Piston (U) JE3.png",
+    "license_note": "This file (or parts of it) is copyright Mojang Studios",
+    "strategy": "manual_override"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Potion of Fire Resistance",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_potion-of-fire-resistance.png",
+    "file_name": "ItemSprite potion-of-fire-resistance.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Potion of Healing",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_potion-of-healing.png",
+    "file_name": "ItemSprite potion-of-healing.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Potion of Invisibility",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_potion-of-invisibility.png",
+    "file_name": "ItemSprite potion-of-invisibility.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Potion of Night Vision",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_potion-of-night-vision.png",
+    "file_name": "ItemSprite potion-of-night-vision.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Potion of Slow Falling",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_potion-of-slow-falling.png",
+    "file_name": "ItemSprite potion-of-slow-falling.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Potion of Speed",
+    "source_page_url": "https://minecraft.wiki/w/File:Potion_of_Swiftness_JE3.png",
+    "file_name": "Potion of Swiftness JE3.png",
+    "license_note": "This file (or parts of it) is copyright Mojang Studios",
+    "strategy": "manual_override"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Potion of Strength",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_potion-of-strength.png",
+    "file_name": "ItemSprite potion-of-strength.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Potion of Water Breathing",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_potion-of-water-breathing.png",
+    "file_name": "ItemSprite potion-of-water-breathing.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Pumpkin Pie",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_pumpkin-pie.png",
+    "file_name": "ItemSprite pumpkin-pie.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Recovery Compass",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_recovery-compass.png",
+    "file_name": "ItemSprite recovery-compass.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Redstone Comparator",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_redstone-comparator.png",
+    "file_name": "ItemSprite redstone-comparator.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Redstone Dust",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_redstone-dust.png",
+    "file_name": "ItemSprite redstone-dust.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Redstone Repeater",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_redstone-repeater.png",
+    "file_name": "ItemSprite redstone-repeater.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Respawn Anchor",
+    "source_page_url": "https://minecraft.wiki/w/File:Respawn_Anchor_(0)_JE1.png",
+    "file_name": "Respawn Anchor (0) JE1.png",
+    "license_note": "This file (or parts of it) is copyright Mojang Studios",
+    "strategy": "manual_override"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Saddle",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_saddle.png",
+    "file_name": "ItemSprite saddle.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Shears",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_shears.png",
+    "file_name": "ItemSprite shears.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Shield",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_shield.png",
+    "file_name": "ItemSprite shield.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Smithing Table",
+    "source_page_url": "https://minecraft.wiki/w/File:Smithing_Table_JE2_BE2.png",
+    "file_name": "Smithing Table JE2 BE2.png",
+    "license_note": "This file (or parts of it) is copyright Mojang Studios",
+    "strategy": "manual_override"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Smoker",
+    "source_page_url": "https://minecraft.wiki/w/File:Smoker_(S)_JE2.png",
+    "file_name": "Smoker (S) JE2.png",
+    "license_note": "This file (or parts of it) is copyright Mojang Studios",
+    "strategy": "manual_override"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Spectral Arrow",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_spectral-arrow.png",
+    "file_name": "ItemSprite spectral-arrow.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Spyglass",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_spyglass.png",
+    "file_name": "ItemSprite spyglass.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Sticky Piston",
+    "source_page_url": "https://minecraft.wiki/w/File:Sticky_Piston_(U)_JE3.png",
+    "file_name": "Sticky Piston (U) JE3.png",
+    "license_note": "This file (or parts of it) is copyright Mojang Studios",
+    "strategy": "manual_override"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Stone Pickaxe",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_stone-pickaxe.png",
+    "file_name": "ItemSprite stone-pickaxe.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Stonecutter",
+    "source_page_url": "https://minecraft.wiki/w/File:Stonecutter_JE2_BE1.png",
+    "file_name": "Stonecutter JE2 BE1.png",
+    "license_note": "This file (or parts of it) is copyright Mojang Studios",
+    "strategy": "manual_override"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Suspicious Stew",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_suspicious-stew.png",
+    "file_name": "ItemSprite suspicious-stew.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Tipped Arrow",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_tipped-arrow.png",
+    "file_name": "ItemSprite tipped-arrow.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Totem of Undying",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_totem-of-undying.png",
+    "file_name": "ItemSprite totem-of-undying.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Trial Key",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_trial-key.png",
+    "file_name": "ItemSprite trial-key.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Trident",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_trident.png",
+    "file_name": "ItemSprite trident.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Turtle Helmet",
+    "source_page_url": "https://minecraft.wiki/w/File:Turtle_Shell_JE1_BE1.png",
+    "file_name": "Turtle Shell JE1 BE1.png",
+    "license_note": "This file (or parts of it) is copyright Mojang Studios",
+    "strategy": "manual_override"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Wind Charge",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_wind-charge.png",
+    "file_name": "ItemSprite wind-charge.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Wooden Pickaxe",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_wooden-pickaxe.png",
+    "file_name": "ItemSprite wooden-pickaxe.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "item",
+    "entity_name": "Wooden Sword",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_wooden-sword.png",
+    "file_name": "ItemSprite wooden-sword.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "structure",
+    "entity_name": "Amethyst Geode",
+    "source_page_url": "https://minecraft.wiki/w/File:EnvSprite_amethyst-geode.png",
+    "file_name": "EnvSprite amethyst-geode.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "structure",
+    "entity_name": "Ancient City",
+    "source_page_url": "https://minecraft.wiki/w/File:EnvSprite_ancient-city.png",
+    "file_name": "EnvSprite ancient-city.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "structure",
+    "entity_name": "Bastion Remnant",
+    "source_page_url": "https://minecraft.wiki/w/File:EnvSprite_bastion-remnant.png",
+    "file_name": "EnvSprite bastion-remnant.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "structure",
+    "entity_name": "Buried Treasure",
+    "source_page_url": "https://minecraft.wiki/w/File:EnvSprite_buried-treasure.png",
+    "file_name": "EnvSprite buried-treasure.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "structure",
+    "entity_name": "Desert Pyramid",
+    "source_page_url": "https://minecraft.wiki/w/File:EnvSprite_desert-pyramid.png",
+    "file_name": "EnvSprite desert-pyramid.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "structure",
+    "entity_name": "End City",
+    "source_page_url": "https://minecraft.wiki/w/File:EnvSprite_end-city.png",
+    "file_name": "EnvSprite end-city.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "structure",
+    "entity_name": "End Gateway",
+    "source_page_url": "https://minecraft.wiki/w/File:EnvSprite_end-gateway.png",
+    "file_name": "EnvSprite end-gateway.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "structure",
+    "entity_name": "End Ship",
+    "source_page_url": "https://minecraft.wiki/w/File:EnvSprite_end-ship.png",
+    "file_name": "EnvSprite end-ship.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "structure",
+    "entity_name": "Igloo",
+    "source_page_url": "https://minecraft.wiki/w/File:EnvSprite_igloo.png",
+    "file_name": "EnvSprite igloo.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "structure",
+    "entity_name": "Jungle Pyramid",
+    "source_page_url": "https://minecraft.wiki/w/File:EnvSprite_jungle-pyramid.png",
+    "file_name": "EnvSprite jungle-pyramid.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "structure",
+    "entity_name": "Mineshaft",
+    "source_page_url": "https://minecraft.wiki/w/File:EnvSprite_mineshaft.png",
+    "file_name": "EnvSprite mineshaft.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "structure",
+    "entity_name": "Nether Fortress",
+    "source_page_url": "https://minecraft.wiki/w/File:EnvSprite_nether-fortress.png",
+    "file_name": "EnvSprite nether-fortress.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "structure",
+    "entity_name": "Ocean Monument",
+    "source_page_url": "https://minecraft.wiki/w/File:EnvSprite_ocean-monument.png",
+    "file_name": "EnvSprite ocean-monument.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "structure",
+    "entity_name": "Ocean Ruins",
+    "source_page_url": "https://minecraft.wiki/w/File:EnvSprite_ocean-ruins.png",
+    "file_name": "EnvSprite ocean-ruins.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "structure",
+    "entity_name": "Pillager Outpost",
+    "source_page_url": "https://minecraft.wiki/w/File:EnvSprite_pillager-outpost.png",
+    "file_name": "EnvSprite pillager-outpost.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "structure",
+    "entity_name": "Ruined Portal (Nether)",
+    "source_page_url": "https://minecraft.wiki/w/File:Nether_portal_1.png",
+    "file_name": "Nether portal 1.png",
+    "license_note": "This file (or parts of it) is copyright Mojang Studios",
+    "strategy": "manual_override"
+  },
+  {
+    "entity_type": "structure",
+    "entity_name": "Ruined Portal (Overworld)",
+    "source_page_url": "https://minecraft.wiki/w/File:Overworld_portal_1.png",
+    "file_name": "Overworld portal 1.png",
+    "license_note": "This file (or parts of it) is copyright Mojang Studios",
+    "strategy": "manual_override"
+  },
+  {
+    "entity_type": "structure",
+    "entity_name": "Shipwreck",
+    "source_page_url": "https://minecraft.wiki/w/File:EnvSprite_shipwreck.png",
+    "file_name": "EnvSprite shipwreck.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "structure",
+    "entity_name": "Stronghold",
+    "source_page_url": "https://minecraft.wiki/w/File:StrongholdPortalRoom.png",
+    "file_name": "StrongholdPortalRoom.png",
+    "license_note": "This file (or parts of it) is copyright Mojang Studios",
+    "strategy": "manual_override"
+  },
+  {
+    "entity_type": "structure",
+    "entity_name": "Trail Ruins",
+    "source_page_url": "https://minecraft.wiki/w/File:EnvSprite_trail-ruins.png",
+    "file_name": "EnvSprite trail-ruins.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "structure",
+    "entity_name": "Trial Chamber",
+    "source_page_url": "https://minecraft.wiki/w/File:EnvSprite_trial-chamber.png",
+    "file_name": "EnvSprite trial-chamber.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "structure",
+    "entity_name": "Village",
+    "source_page_url": "https://minecraft.wiki/w/File:EnvSprite_village.png",
+    "file_name": "EnvSprite village.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "structure",
+    "entity_name": "Witch Hut",
+    "source_page_url": "https://minecraft.wiki/w/File:EnvSprite_witch-hut.png",
+    "file_name": "EnvSprite witch-hut.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "structure",
+    "entity_name": "Woodland Mansion",
+    "source_page_url": "https://minecraft.wiki/w/File:EnvSprite_woodland-mansion.png",
+    "file_name": "EnvSprite woodland-mansion.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "sprite_auto"
+  },
+  {
+    "entity_type": "enchantment",
+    "entity_name": "Aqua Affinity",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_enchanted-book.png",
+    "file_name": "ItemSprite enchanted-book.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "representative_enchanted_book"
+  },
+  {
+    "entity_type": "enchantment",
+    "entity_name": "Bane of Arthropods",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_enchanted-book.png",
+    "file_name": "ItemSprite enchanted-book.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "representative_enchanted_book"
+  },
+  {
+    "entity_type": "enchantment",
+    "entity_name": "Blast Protection",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_enchanted-book.png",
+    "file_name": "ItemSprite enchanted-book.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "representative_enchanted_book"
+  },
+  {
+    "entity_type": "enchantment",
+    "entity_name": "Breach",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_enchanted-book.png",
+    "file_name": "ItemSprite enchanted-book.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "representative_enchanted_book"
+  },
+  {
+    "entity_type": "enchantment",
+    "entity_name": "Channeling",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_enchanted-book.png",
+    "file_name": "ItemSprite enchanted-book.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "representative_enchanted_book"
+  },
+  {
+    "entity_type": "enchantment",
+    "entity_name": "Curse of Binding",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_enchanted-book.png",
+    "file_name": "ItemSprite enchanted-book.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "representative_enchanted_book"
+  },
+  {
+    "entity_type": "enchantment",
+    "entity_name": "Curse of Vanishing",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_enchanted-book.png",
+    "file_name": "ItemSprite enchanted-book.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "representative_enchanted_book"
+  },
+  {
+    "entity_type": "enchantment",
+    "entity_name": "Density",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_enchanted-book.png",
+    "file_name": "ItemSprite enchanted-book.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "representative_enchanted_book"
+  },
+  {
+    "entity_type": "enchantment",
+    "entity_name": "Depth Strider",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_enchanted-book.png",
+    "file_name": "ItemSprite enchanted-book.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "representative_enchanted_book"
+  },
+  {
+    "entity_type": "enchantment",
+    "entity_name": "Efficiency",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_enchanted-book.png",
+    "file_name": "ItemSprite enchanted-book.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "representative_enchanted_book"
+  },
+  {
+    "entity_type": "enchantment",
+    "entity_name": "Feather Falling",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_enchanted-book.png",
+    "file_name": "ItemSprite enchanted-book.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "representative_enchanted_book"
+  },
+  {
+    "entity_type": "enchantment",
+    "entity_name": "Fire Aspect",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_enchanted-book.png",
+    "file_name": "ItemSprite enchanted-book.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "representative_enchanted_book"
+  },
+  {
+    "entity_type": "enchantment",
+    "entity_name": "Fire Protection",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_enchanted-book.png",
+    "file_name": "ItemSprite enchanted-book.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "representative_enchanted_book"
+  },
+  {
+    "entity_type": "enchantment",
+    "entity_name": "Flame",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_enchanted-book.png",
+    "file_name": "ItemSprite enchanted-book.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "representative_enchanted_book"
+  },
+  {
+    "entity_type": "enchantment",
+    "entity_name": "Fortune",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_enchanted-book.png",
+    "file_name": "ItemSprite enchanted-book.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "representative_enchanted_book"
+  },
+  {
+    "entity_type": "enchantment",
+    "entity_name": "Frost Walker",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_enchanted-book.png",
+    "file_name": "ItemSprite enchanted-book.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "representative_enchanted_book"
+  },
+  {
+    "entity_type": "enchantment",
+    "entity_name": "Impaling",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_enchanted-book.png",
+    "file_name": "ItemSprite enchanted-book.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "representative_enchanted_book"
+  },
+  {
+    "entity_type": "enchantment",
+    "entity_name": "Infinity",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_enchanted-book.png",
+    "file_name": "ItemSprite enchanted-book.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "representative_enchanted_book"
+  },
+  {
+    "entity_type": "enchantment",
+    "entity_name": "Knockback",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_enchanted-book.png",
+    "file_name": "ItemSprite enchanted-book.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "representative_enchanted_book"
+  },
+  {
+    "entity_type": "enchantment",
+    "entity_name": "Looting",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_enchanted-book.png",
+    "file_name": "ItemSprite enchanted-book.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "representative_enchanted_book"
+  },
+  {
+    "entity_type": "enchantment",
+    "entity_name": "Loyalty",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_enchanted-book.png",
+    "file_name": "ItemSprite enchanted-book.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "representative_enchanted_book"
+  },
+  {
+    "entity_type": "enchantment",
+    "entity_name": "Mending",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_enchanted-book.png",
+    "file_name": "ItemSprite enchanted-book.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "representative_enchanted_book"
+  },
+  {
+    "entity_type": "enchantment",
+    "entity_name": "Multishot",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_enchanted-book.png",
+    "file_name": "ItemSprite enchanted-book.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "representative_enchanted_book"
+  },
+  {
+    "entity_type": "enchantment",
+    "entity_name": "Piercing",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_enchanted-book.png",
+    "file_name": "ItemSprite enchanted-book.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "representative_enchanted_book"
+  },
+  {
+    "entity_type": "enchantment",
+    "entity_name": "Power",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_enchanted-book.png",
+    "file_name": "ItemSprite enchanted-book.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "representative_enchanted_book"
+  },
+  {
+    "entity_type": "enchantment",
+    "entity_name": "Projectile Protection",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_enchanted-book.png",
+    "file_name": "ItemSprite enchanted-book.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "representative_enchanted_book"
+  },
+  {
+    "entity_type": "enchantment",
+    "entity_name": "Protection",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_enchanted-book.png",
+    "file_name": "ItemSprite enchanted-book.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "representative_enchanted_book"
+  },
+  {
+    "entity_type": "enchantment",
+    "entity_name": "Punch",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_enchanted-book.png",
+    "file_name": "ItemSprite enchanted-book.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "representative_enchanted_book"
+  },
+  {
+    "entity_type": "enchantment",
+    "entity_name": "Quick Charge",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_enchanted-book.png",
+    "file_name": "ItemSprite enchanted-book.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "representative_enchanted_book"
+  },
+  {
+    "entity_type": "enchantment",
+    "entity_name": "Respiration",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_enchanted-book.png",
+    "file_name": "ItemSprite enchanted-book.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "representative_enchanted_book"
+  },
+  {
+    "entity_type": "enchantment",
+    "entity_name": "Riptide",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_enchanted-book.png",
+    "file_name": "ItemSprite enchanted-book.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "representative_enchanted_book"
+  },
+  {
+    "entity_type": "enchantment",
+    "entity_name": "Sharpness",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_enchanted-book.png",
+    "file_name": "ItemSprite enchanted-book.png",
+    "license_note": "Sem imagem individual adequada; utilizar fallback",
+    "strategy": "representative_enchanted_book"
+  },
+  {
+    "entity_type": "enchantment",
+    "entity_name": "Silk Touch",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_enchanted-book.png",
+    "file_name": "ItemSprite enchanted-book.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "representative_enchanted_book"
+  },
+  {
+    "entity_type": "enchantment",
+    "entity_name": "Smite",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_enchanted-book.png",
+    "file_name": "ItemSprite enchanted-book.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "representative_enchanted_book"
+  },
+  {
+    "entity_type": "enchantment",
+    "entity_name": "Soul Speed",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_enchanted-book.png",
+    "file_name": "ItemSprite enchanted-book.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "representative_enchanted_book"
+  },
+  {
+    "entity_type": "enchantment",
+    "entity_name": "Sweeping Edge",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_enchanted-book.png",
+    "file_name": "ItemSprite enchanted-book.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "representative_enchanted_book"
+  },
+  {
+    "entity_type": "enchantment",
+    "entity_name": "Swift Sneak",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_enchanted-book.png",
+    "file_name": "ItemSprite enchanted-book.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "representative_enchanted_book"
+  },
+  {
+    "entity_type": "enchantment",
+    "entity_name": "Thorns",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_enchanted-book.png",
+    "file_name": "ItemSprite enchanted-book.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "representative_enchanted_book"
+  },
+  {
+    "entity_type": "enchantment",
+    "entity_name": "Unbreaking",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_enchanted-book.png",
+    "file_name": "ItemSprite enchanted-book.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "representative_enchanted_book"
+  },
+  {
+    "entity_type": "enchantment",
+    "entity_name": "Wind Burst",
+    "source_page_url": "https://minecraft.wiki/w/File:ItemSprite_enchanted-book.png",
+    "file_name": "ItemSprite enchanted-book.png",
+    "license_note": "Consultar a página do arquivo na Minecraft Wiki.",
+    "strategy": "representative_enchanted_book"
+  }
+]

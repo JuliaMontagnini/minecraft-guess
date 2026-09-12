@@ -46,6 +46,7 @@ class GuessResponse(
     lives: int
     status: str
     answer: str | None = None
+    answer_image_url: str | None = None
 
 
 class HintResponse(
@@ -57,6 +58,7 @@ class HintResponse(
     lives: int
     status: str
     answer: str | None = None
+    answer_image_url: str | None = None
 
 
 class GameGuessHistoryItem(
@@ -82,6 +84,7 @@ class GameStateResponse(
     max_lives: int
     status: str
     answer: str | None = None
+    answer_image_url: str | None = None
 
     guesses: list[
         GameGuessHistoryItem

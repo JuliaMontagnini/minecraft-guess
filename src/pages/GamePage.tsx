@@ -44,6 +44,9 @@ import brownBackground from
 import greenBackground from
   "../assets/fundo-quadriculado-verde.png";
 
+import {
+  AnswerImage,
+} from "../components/AnswerImage";
 
 const pageBackgroundStyle:
   CSSProperties = {
@@ -196,6 +199,12 @@ export function GamePage() {
     string | null
   >(null);
 
+  const [
+    secretImageUrl,
+    setSecretImageUrl,
+  ] = useState<
+    string | null
+  >(null);
 
   const [
     loading,
@@ -317,6 +326,9 @@ export function GamePage() {
           game.answer,
         );
 
+        setSecretImageUrl(
+          game.answer_image_url,
+        );
 
         setGuesses(
           game.guesses
@@ -775,6 +787,9 @@ export function GamePage() {
           result.answer,
         );
       }
+      setSecretImageUrl(
+        result.answer_image_url,
+      );
     } catch (error) {
       setError(
         error instanceof Error
@@ -872,6 +887,9 @@ export function GamePage() {
         );
       }
 
+      setSecretImageUrl(
+        result.answer_image_url,
+      );
 
       setAnswer("");
 
@@ -1132,6 +1150,10 @@ export function GamePage() {
               {secretAnswer}
             </p>
 
+            <AnswerImage
+              src={secretImageUrl}
+              answer={secretAnswer}
+            />
 
             <p
               className="
@@ -1301,6 +1323,10 @@ export function GamePage() {
               {secretAnswer}
             </p>
 
+            <AnswerImage
+              src={secretImageUrl}
+              answer={secretAnswer}
+            />
 
             <p
               className="

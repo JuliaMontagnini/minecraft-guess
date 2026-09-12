@@ -28,6 +28,7 @@ export interface GuessResponse {
   lives: number;
   status: GameStatus;
   answer: string | null;
+  answer_image_url: string | null;
 }
 
 
@@ -38,8 +39,8 @@ export interface HintResponse {
   lives: number;
   status: GameStatus;
   answer: string | null;
+  answer_image_url: string | null;
 }
-
 
 export interface GameGuessHistoryItem {
   guess: string;
@@ -60,6 +61,7 @@ export interface GameStateResponse {
   max_lives: number;
   status: GameStatus;
   answer: string | null;
+  answer_image_url: string | null;
 
   guesses:
     GameGuessHistoryItem[];

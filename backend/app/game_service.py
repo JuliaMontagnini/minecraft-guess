@@ -1496,6 +1496,9 @@ def submit_guess(
                     e.name
                         AS secret_name,
 
+                    em.image_url
+                        AS secret_image_url,
+
                     (
                         SELECT
                             t.translated_name
@@ -1515,6 +1518,10 @@ def submit_guess(
                 JOIN entities e
                     ON e.id =
                         g.secret_entity_id
+
+                LEFT JOIN entity_media em
+                    ON em.entity_id = e.id
+                    AND em.source = 'minecraft_wiki'
 
                 WHERE g.id = :game_id
 
@@ -1644,6 +1651,11 @@ def submit_guess(
 
                 "answer":
                     translated_secret,
+
+                "answer_image_url":
+                    game[
+                        "secret_image_url"
+                    ],
             }
 
         # -------------------------------------------------
@@ -1725,6 +1737,14 @@ def submit_guess(
             else None
         )
 
+        answer_image_url = (
+            game[
+                "secret_image_url"
+            ]
+            if new_status == "lost"
+            else None
+        )
+
         return {
             "game_id":
                 game_id,
@@ -1740,6 +1760,9 @@ def submit_guess(
 
             "answer":
                 answer,
+
+            "answer_image_url":
+                answer_image_url,
         }
 
 
@@ -1764,6 +1787,9 @@ def reveal_hint(
                     e.name
                         AS secret_name,
 
+                    em.image_url
+                        AS secret_image_url,
+
                     e.raw_payload,
 
                     (
@@ -1785,6 +1811,10 @@ def reveal_hint(
                 JOIN entities e
                     ON e.id =
                         g.secret_entity_id
+
+                LEFT JOIN entity_media em
+                    ON em.entity_id = e.id
+                    AND em.source = 'minecraft_wiki'
 
                 WHERE g.id = :game_id
 
@@ -1951,6 +1981,14 @@ def reveal_hint(
             else None
         )
 
+        answer_image_url = (
+            game[
+                "secret_image_url"
+            ]
+            if new_status == "lost"
+            else None
+        )
+
         return {
             "game_id":
                 game_id,
@@ -1969,6 +2007,9 @@ def reveal_hint(
 
             "answer":
                 answer,
+
+            "answer_image_url":
+                answer_image_url,
         }
 
 
@@ -1993,6 +2034,9 @@ def get_game_state(
                     e.name
                         AS secret_name,
 
+                    em.image_url
+                        AS secret_image_url,
+
                     (
                         SELECT
                             t.translated_name
@@ -2012,6 +2056,10 @@ def get_game_state(
                 JOIN entities e
                     ON e.id =
                         g.secret_entity_id
+
+                LEFT JOIN entity_media em
+                    ON em.entity_id = e.id
+                    AND em.source = 'minecraft_wiki'
 
                 WHERE g.id = :game_id
                 """
@@ -2084,6 +2132,18 @@ def get_game_state(
         else None
     )
 
+    answer_image_url = (
+        game[
+            "secret_image_url"
+        ]
+        if game["status"]
+        in (
+            "won",
+            "lost",
+        )
+        else None
+    )
+
     return {
         "game_id":
             game["id"],
@@ -2106,6 +2166,9 @@ def get_game_state(
 
         "answer":
             answer,
+
+        "answer_image_url":
+            answer_image_url,
 
         "guesses": [
             {
