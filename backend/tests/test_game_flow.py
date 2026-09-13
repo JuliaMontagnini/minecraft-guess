@@ -191,25 +191,35 @@ def media_for_cow():
             connection.execute(
                 text(
                     """
-                    UPDATE entity_media
-                    SET
+                    INSERT INTO entity_media (
+                        entity_id,
+                        source,
+                        source_page_url,
+                        file_name,
+                        image_url,
+                        license_note
+                    )
+                    VALUES (
+                        :entity_id,
+                        'minecraft_wiki',
+                        :source_page_url,
+                        :file_name,
+                        :image_url,
+                        :license_note
+                    )
+
+                    ON DUPLICATE KEY UPDATE
                         source_page_url =
-                            :source_page_url,
+                            VALUES(source_page_url),
 
                         file_name =
-                            :file_name,
+                            VALUES(file_name),
 
                         image_url =
-                            :image_url,
+                            VALUES(image_url),
 
                         license_note =
-                            :license_note
-
-                    WHERE
-                        entity_id =
-                            :entity_id
-                        AND source =
-                            'minecraft_wiki'
+                            VALUES(license_note)
                     """
                 ),
                 {

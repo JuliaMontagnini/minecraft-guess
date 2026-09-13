@@ -3,7 +3,6 @@
 - Entidades: 304
 - Com mídia cadastrada: 304
 - Sem mídia: 0
-- URLs remotas inválidas: 0
 
 ## Cobertura por categoria
 
