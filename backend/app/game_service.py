@@ -1837,6 +1837,12 @@ def reveal_hint(
                 "Esta partida já terminou."
             )
 
+        if game["lives_remaining"] <= 1:
+            raise GameError(
+                "Você precisa ter pelo menos "
+                "2 HP para pedir uma dica."
+            )
+
         payload = load_payload(
             game["raw_payload"]
         )

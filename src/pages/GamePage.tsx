@@ -740,8 +740,8 @@ export function GamePage() {
       !gameId
       || loading
       || gameStatus !== "playing"
-      || hints.length
-        >= MAX_HINTS
+      || lives <= 1
+      || hints.length >= MAX_HINTS
     ) {
       return;
     }
@@ -1783,8 +1783,8 @@ export function GamePage() {
 
                 disabled={
                   loading
-                  || hints.length
-                    >= MAX_HINTS
+                  || lives <= 1
+                  || hints.length >= MAX_HINTS
                 }
 
                 className="
@@ -1800,10 +1800,11 @@ export function GamePage() {
               >
                 {loading
                   ? "Aguarde..."
-                  : hints.length
-                      >= MAX_HINTS
+                  : hints.length >= MAX_HINTS
                     ? "Todas as dicas usadas"
-                    : "Nova dica"}
+                    : lives <= 1
+                      ? "Dica indisponível (1 vida restante)"
+                      : "Nova dica"}
               </button>
 
 

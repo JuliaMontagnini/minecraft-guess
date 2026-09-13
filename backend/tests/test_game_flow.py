@@ -831,9 +831,8 @@ def test_missing_image_does_not_break_game(
         is None
     )
 
-def test_hint_that_causes_loss_reveals_image(
+def test_hint_is_blocked_with_one_hp(
     created_game_ids,
-    media_for_cow,
 ):
     game = create_game_for_entity(
         entity_name="Cow",
@@ -842,31 +841,65 @@ def test_hint_that_causes_loss_reveals_image(
             created_game_ids,
     )
 
-    # Primeiro perde 5 HP
-    # por palpites incorretos.
-    for attempt in range(5):
-        result = submit_guess(
-            game["game_id"],
-            f"__erro_hint_{attempt}__",
+    with engine.begin() as connection:
+        connection.execute(
+            text(
+                """
+                UPDATE games
+                SET lives_remaining = 1
+                WHERE id = :game_id
+                """
+            ),
+            {
+                "game_id":
+                    game["game_id"],
+            },
         )
 
-        assert result["status"] == (
-            "playing"
-        )
-
-    # Depois usa as 5 dicas.
-    result = None
-
-    for _ in range(MAX_HINTS):
-        result = reveal_hint(
+    with pytest.raises(
+        GameError,
+        match="pelo menos 2 HP",
+    ):
+        reveal_hint(
             game["game_id"]
         )
 
-    assert result is not None
-    assert result["status"] == "lost"
-    assert result["lives"] == 0
-
-    assert (
-        result["answer_image_url"]
-        == media_for_cow
+    state = get_game_state(
+        game["game_id"]
     )
+
+    assert state["lives"] == 1
+    assert state["status"] == "playing"
+    assert state["hints"] == []
+
+def test_hint_is_allowed_with_two_hp(
+    created_game_ids,
+):
+    game = create_game_for_entity(
+        entity_name="Cow",
+        category="mobs",
+        created_game_ids=
+            created_game_ids,
+    )
+
+    with engine.begin() as connection:
+        connection.execute(
+            text(
+                """
+                UPDATE games
+                SET lives_remaining = 2
+                WHERE id = :game_id
+                """
+            ),
+            {
+                "game_id":
+                    game["game_id"],
+            },
+        )
+
+    result = reveal_hint(
+        game["game_id"]
+    )
+
+    assert result["lives"] == 1
+    assert result["status"] == "playing"
