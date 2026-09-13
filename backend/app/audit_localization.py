@@ -38,11 +38,54 @@ ALLOWED_TERMS = {
     "hp",
     "xp",
     "lava",
+    "ender",
+    "shulkers",
+    "shulker",
+    "tnt",
+    "piglins",
+    "piglin",
+    "java",
+    "deltas",
+    "totem",
+    "obsidian",
+    "sculk",
+    "tropical",
+    "netherrack",
+    "podzol",
+}
+# Palavras cuja grafia também é perfeitamente
+# válida em português. Elas podem existir no
+# raw_payload em inglês e legitimamente
+# permanecer iguais na dica traduzida.
+
+PORTUGUESE_ENGLISH_OVERLAP = {
+    "a",
+    "e",
+    "as",
+    "o",
+    "os",
+    "no",
+    "nos",
+    "coral",
+    "me",
+    "se",
+    "y",
+    "x",
+    "do",
+    "portal",
+    "material",
+    "item",
+    "magma",
+    "portal",
+    "normal",
+    "polar",
+    "central",
 }
 
 # Não precisa conter todas as palavras do inglês:
 # este conjunto serve como segunda camada da auditoria.
 SUSPICIOUS_ENGLISH_WORDS = {
+    "snowy",
     "cherry",
     "cherries",
     "tree",
@@ -225,6 +268,125 @@ def normalize_text(
         value.strip(),
     ).casefold()
 
+def tokenize_words(
+    value: str,
+) -> set[str]:
+    """
+    Extrai palavras para auditoria.
+
+    Normaliza formatos comuns da API:
+
+    very_rare
+        -> very rare
+
+    gravel-covered
+        -> gravel covered
+    """
+
+    normalized = (
+        str(value)
+        .replace("_", " ")
+        .replace("-", " ")
+        .casefold()
+    )
+
+    return set(
+        re.findall(
+            r"[^\W\d_]+",
+            normalized,
+            flags=re.UNICODE,
+        )
+    )
+
+def get_unchanged_entity_tokens(
+    name_translations:
+        dict[str, str],
+) -> set[str]:
+    """
+    Retorna palavras de entidades cujo
+    nome original e tradução são iguais.
+
+    Exemplo:
+        Creeper -> Creeper
+
+    Esses nomes não representam vazamento
+    de inglês.
+    """
+
+    allowed = set()
+
+    for original, translated in (
+        name_translations.items()
+    ):
+        if (
+            normalize_text(original)
+            != normalize_text(translated)
+        ):
+            continue
+
+        allowed.update(
+            tokenize_words(
+                original
+            )
+        )
+
+    return allowed
+
+def find_untranslated_payload_words(
+    hint: str,
+    payload: dict,
+    name_translations:
+        dict[str, str],
+) -> list[str]:
+    """
+    Detecta palavras do raw_payload original
+    que sobreviveram literalmente na dica
+    final.
+
+    Como os dados originais da Astroworld
+    estão majoritariamente em inglês,
+    isso funciona como uma auditoria muito
+    mais ampla do que uma lista manual de
+    palavras suspeitas.
+    """
+
+    hint_words = (
+        tokenize_words(
+            hint
+        )
+    )
+
+    payload_words = set()
+
+    raw_strings = (
+        collect_payload_strings(
+            payload
+        )
+    )
+
+    for raw_value in raw_strings:
+        payload_words.update(
+            tokenize_words(
+                raw_value
+            )
+        )
+
+    allowed = (
+        ALLOWED_TERMS
+        | PORTUGUESE_ENGLISH_OVERLAP
+        | get_unchanged_entity_tokens(
+            name_translations
+        )
+    )
+
+    suspicious = (
+        hint_words
+        & payload_words
+    ) - allowed
+
+    return sorted(
+        suspicious
+    )
 
 def contains_text(
     text: str,
@@ -526,6 +688,24 @@ def main():
                         }
                     )
 
+                payload_words = (
+                    find_untranslated_payload_words(
+                        hint,
+                        payload,
+                        name_translations,
+                    )
+                )
+
+                if payload_words:
+                    reasons.append(
+                        {
+                            "type":
+                                "raw_payload_words_still_visible",
+
+                            "values":
+                                payload_words,
+                        }
+                    )
                 if reasons:
                     issues.append(
                         {

@@ -9,6 +9,289 @@ from typing import Any
 
 VALUE_TRANSLATIONS = {
 
+    "oak log":
+        "Tronco de Carvalho",
+
+    "moss block":
+        "Bloco de Musgo",
+
+    "moss carpet":
+        "Tapete de Musgo",
+
+    "mangrove log":
+        "Tronco de Mangue",
+
+    "mangrove roots":
+        "Raízes de Mangue",
+
+    "spruce leaves":
+        "Folhas de Pinheiro",
+
+    "terracotta":
+        "Terracota",
+
+    "red sand":
+        "Areia Vermelha",
+
+    "bamboo":
+        "Bambu",
+
+    "basalt":
+        "Basalto",
+
+    "smooth basalt":
+        "Basalto Liso",
+
+    "sand":
+        "Areia",
+
+    "sandstone":
+        "Arenito",
+
+    "birch log":
+        "Tronco de Bétula",
+
+    "birch leaves":
+        "Folhas de Bétula",
+
+    "crimson nylium":
+        "Nicélio Carmesim",
+
+    "crimson stem":
+        "Caule Carmesim",
+
+    "dark oak log":
+        "Tronco de Carvalho Escuro",
+
+    "dark oak leaves":
+        "Folhas de Carvalho Escuro",
+
+    "sculk vein":
+        "Veia de Sculk",
+
+    "pointed dripstone":
+        "Espeleotema Pontiagudo",
+
+    "dripstone block":
+        "Bloco de Espeleotema",
+
+    "end stone":
+        "Pedra do End",
+
+    "chorus plant":
+        "Planta do Coro",
+
+    "spruce log":
+        "Tronco de Pinheiro",
+
+    "pale oak log":
+        "Tronco de Carvalho Pálido",
+
+    "pale oak leaves":
+        "Folhas de Carvalho Pálido",
+
+    "grass block":
+        "Bloco de Grama",
+
+    "tall grass":
+        "Grama Alta",
+
+    "clay":
+        "Argila",
+
+    "acacia log":
+        "Tronco de Acácia",
+
+    "acacia leaves":
+        "Folhas de Acácia",
+
+    "soul sand":
+        "Areia das Almas",
+
+    "soul soil":
+        "Solo das Almas",
+
+    "calcite":
+        "Calcita",
+
+    "sunflower":
+        "Girassol",
+
+    "lily pad":
+        "Vitória-régia",
+
+    "vine":
+        "Trepadeiras",
+
+    "coral block":
+        "Bloco de Coral",
+
+    "coral fan":
+        "Leque de Coral",
+
+    "warped nylium":
+        "Nicélio Distorcido",
+
+    "warped stem":
+        "Caule Distorcido",
+
+    "coarse dirt":
+        "Terra Infértil",
+
+    "feather":
+        "Pena",
+
+    "flint":
+        "Sílex",
+
+    "glass":
+        "Vidro",
+
+    "wheat":
+        "Trigo",
+
+    "dungeon":
+        "Masmorra",
+
+    "lure":
+        "Isca",
+
+    "luck of the sea":
+        "Sorte do Mar",
+
+    "slimeball":
+        "Bola de Slime",
+
+    "music disc":
+        "Disco de Música",
+
+    "pumpkin":
+        "Abóbora",
+
+    "compass":
+        "Bússola",
+
+    "crying obsidian":
+        "Obsidiana Chorona",
+
+    "glowstone":
+        "Pedra Luminosa",
+
+    "glowstone dust":
+        "Pó de Pedra Luminosa",
+
+    "any log":
+        "Qualquer Tronco",
+
+    "brown mushroom":
+        "Cogumelo Marrom",
+
+    "red mushroom":
+        "Cogumelo Vermelho",
+
+    "red mushroom block":
+        "Bloco de Cogumelo Vermelho",
+
+    "bowl":
+        "Tigela",
+
+    "any flower":
+        "Qualquer Flor",
+
+    "scute":
+        "Escama de Tartaruga",
+
+    "cactus":
+        "Cacto",
+
+    "wheat seeds":
+        "Sementes de Trigo",
+
+    "raw beef":
+        "Carne Bovina Crua",
+
+    "gunpowder":
+        "Pólvora",
+
+    "rotten flesh":
+        "Carne Podre",
+
+    "prismarine shard":
+        "Fragmento de Prismarinho",
+
+    "prismarine crystals":
+        "Cristais de Prismarinho",
+
+    "sweet berries":
+        "Bagas Doces",
+
+    "glow ink sac":
+        "Bolsa de Tinta Brilhante",
+
+    "raw porkchop":
+        "Costeleta de Porco Crua",
+
+    "poppy":
+        "Papoula",
+
+    "cookies":
+        "Biscoitos",
+
+    "carrot":
+        "Cenoura",
+
+    "raw mutton":
+        "Carneiro Cru",
+
+    "wool":
+        "Lã",
+
+    "torchflower seeds":
+        "Sementes de Flor-tocha",
+
+    "snowball":
+        "Bola de Neve",
+
+    "ink sac":
+        "Bolsa de Tinta",
+
+    "sculk catalyst":
+        "Catalisador de Sculk",
+
+    "glass bottle":
+        "Frasco de Vidro",
+
+    "coal":
+        "Carvão",
+
+    "warm":
+        "quente",
+
+    "unique":
+        "única",
+
+    # -----------------------------------------------------
+    # Blocos / vegetação identificados pela auditoria
+    # -----------------------------------------------------
+
+    "cherry log":
+        "Tronco de Cerejeira",
+
+    "cherry leaves":
+        "Folhas de Cerejeira",
+
+    "gravel":
+        "Cascalho",
+
+    "seagrass":
+        "Erva Marinha",
+
+    "allium":
+        "Álio",
+
+    "azure bluet":
+        "Houstonia Azul",
+
     "during raids":
         "durante invasões",
     # -----------------------------------------------------
@@ -80,7 +363,9 @@ VALUE_TRANSLATIONS = {
     "common": "comum",
     "uncommon": "incomum",
     "rare": "raro",
-    "very rare": "muito raro",
+    "very rare": "muito rara",
+    "very_rare": "muito rara",
+    "very": "muito",
     "epic": "épico",
 
     # -----------------------------------------------------
@@ -361,9 +646,11 @@ VALUE_TRANSLATIONS = {
 
 # =========================================================
 # NOMES / REFERÊNCIAS QUE NÃO BATEM DIRETAMENTE
-# =========================================================
 
 REFERENCE_ALIASES = {
+    "creaking":
+        "Rangente",
+        
     "mycelium":
         "Micélio",
 
@@ -385,7 +672,6 @@ REFERENCE_ALIASES = {
     "ominous vault":
         "Cofre sinistro",
 
-    # Plurais usados em frases da API
     "cows":
         "vacas",
 
@@ -405,51 +691,228 @@ REFERENCE_ALIASES = {
         "zumbis",
 }
 
-
 # =========================================================
-# TEXTOS LIVRES DA ASTROWORLD
-#
-# São frases que não podem ser traduzidas corretamente
-# somente palavra por palavra.
-# =========================================================
+# Frases que não podem ser traduzidas corretamente palavra por palavra.
 
 TEXT_TRANSLATIONS = {
+    # -----------------------------------------------------
+    # Terrenos descobertos pela auditoria ampla
+    # -----------------------------------------------------
+
+    "terracotta layers":
+        "camadas de terracota",
+
+    "basalt columns":
+        "colunas de basalto",
+
+    "sand shoreline":
+        "litoral arenoso",
+
+    "crimson fungi":
+        "fungos carmesim",
+
+    "sculk growth":
+        "crescimento de sculk",
+
+    "sand dunes":
+        "dunas de areia",
+
+    "barren end islands":
+        "ilhas áridas do End",
+
+    "large end islands":
+        "grandes ilhas do End",
+
+    "medium-sized end islands":
+        "ilhas médias do End",
+
+    "tall terracotta pillars":
+        "altos pilares de terracota",
+
+    "jagged mountain peaks":
+        "picos montanhosos pontiagudos",
+
+    "cave vegetation":
+        "vegetação de caverna",
+
+    "grassy highlands":
+        "terras altas gramadas",
+
+    "netherrack terrain":
+        "terreno de Netherrack",
+
+    "flat terrain":
+        "terreno plano",
+
+    "elevated flat plateau":
+        "planalto elevado e plano",
+
+    "tiny floating islands":
+        "pequenas ilhas flutuantes",
+
+    "central island":
+        "ilha central",
+
+    "coral reefs":
+        "recifes de coral",
+
+    "warped fungi":
+        "fungos distorcidos",
+
+    "forested steep hills":
+        "colinas íngremes arborizadas",
+
+    "steep hills":
+        "colinas íngremes",
+
+    "dramatic terrain":
+        "terreno acidentado",
+
+    # -----------------------------------------------------
+    # Locais / obtenção / detalhes
+    # -----------------------------------------------------
+
+    "exit portal":
+        "Portal de Saída",
+
+    "ruined portal":
+        "Portal em Ruínas",
+
+    "trial chambers":
+        "Câmaras do Desafio",
+
+    "old growth taiga":
+        "Taiga antiga",
+
+    "end cities":
+        "Cidades do End",
+
+    "mountains":
+        "montanhas",
+
+    "caves":
+        "cavernas",
+
+    "all biomes":
+        "todos os biomas",
+
+    "as treasure":
+        "como tesouro",
+
+    "goats ramming hard blocks":
+        "cabras atingindo blocos duros",
+
+    "trial spawner rewards":
+        "recompensas de geradores de desafio",
+
+    "ominous trial spawner rewards":
+        (
+            "recompensas de geradores "
+            "de desafio sinistro"
+        ),
+
+    "dies in 5 minutes":
+        "morre em 5 minutos",
+
+    "seeks shelter":
+        "procura abrigo",
+
+    "on land":
+        "em terra",
+
+    "wolves":
+        "lobos",
+
+    "but reduced":
+        "mas com dano reduzido",
+
+    "axolotls":
+        "axolotes",
+
+    "ally":
+        "aliados",
+
+    "instant death":
+        "morte instantânea",
+
+    "sky":
+        "céu",
+
+    "all":
+        "todo o local",
+
+    "sneaking":
+        "andar agachado",
+
+    "reduces detection":
+        "reduz a detecção",
+
+    "wool blocks":
+        "blocos de lã",
+
+    "muffles vibrations":
+        "abafa as vibrações",
+
+    "bedrock ceiling trap":
+        "armadilha no teto de rocha-matriz",
+
+    # -----------------------------------------------------
+    # Perigos / estruturas
+    # -----------------------------------------------------
+
+    "tnt trap triggered by pressure plate in treasure room":
+        "armadilha de TNT acionada por uma placa de pressão na sala do tesouro",
+
+    "any nether biome":
+        "qualquer bioma do Nether",
+
+    "nether environment hazards":
+        "perigos do ambiente do Nether",
+
+    "no hostile mobs, but structure is underground":
+        "não há mobs hostis, mas a estrutura é subterrânea",
+    # -----------------------------------------------------
+    # Casas de profissões das vilas
+    # -----------------------------------------------------
+
+    "cartographer house":
+        "casa do cartógrafo",
+
+    "weaponsmith house":
+        "casa do ferreiro de armas",
+
+    "shepherd house":
+        "casa do pastor",
+
+    "toolsmith house":
+        "casa do ferreiro de ferramentas",
+
+    "mason house":
+        "casa do pedreiro",
+    # -----------------------------------------------------
+    # OUTROS
+    # -----------------------------------------------------
 
     "mycelium ground":
         "solo de micélio",
 
     "deflected fireballs (one-shot kill)":
-        (
-            "bolas de fogo rebatidas "
-            "(podem derrotar com um único golpe)"
-        ),
+        "bolas de fogo rebatidas (podem derrotar com um único golpe)",
 
     "warped fungus (repels them)":
-        (
-            "Fungo Distorcido "
-            "(faz com que se afastem)"
-        ),
+        "Fungo Distorcido (faz com que se afastem)",
 
     "nether portals":
         "Portais do Nether",
 
     "smite enchantment (becomes zombified in overworld)":
-        (
-            "encantamento Julgamento "
-            "(torna-se zumbificado no Mundo Superior)"
-        ),
+        "encantamento Julgamento (torna-se zumbificado no Mundo Superior)",
 
     "shulker levitation effect causes fatal falls":
-        (
-            "o efeito de levitação dos Shulkers "
-            "pode causar quedas fatais"
-        ),
+        "o efeito de levitação dos Shulkers pode causar quedas fatais",
 
     "shulker levitation over the void":
-    (
-        "shulkers podem causar "
-        "levitação sobre o vazio"
-    ),
+        "shulkers podem causar levitação sobre o vazio",
     # -----------------------------------------------------
     # Terreno / biomas
     # -----------------------------------------------------
@@ -465,6 +928,45 @@ TEXT_TRANSLATIONS = {
 
     "dense flowers":
         "grande concentração de flores",
+
+    "cherry blossom trees":
+        "cerejeiras floridas",
+
+    "gravel floor":
+        "leito de cascalho",
+
+    "snowy spruce trees on mountainsides":
+        "pinheiros cobertos de neve nas encostas das montanhas",
+
+    "sand floor":
+        "leito de areia",
+
+    "tall birch trees":
+        "bétulas altas",
+
+    "giant 2x2 spruce trees":
+        "pinheiros gigantes 2x2",
+
+    "pale oak trees":
+        "carvalhos pálidos",
+
+    "acacia trees":
+        "acácias",
+
+    "snowy sand shores":
+        "margens arenosas cobertas de neve",
+
+    "flat snowy terrain":
+        "terreno plano coberto de neve",
+
+    "steep snowy mountainsides":
+        "encostas íngremes cobertas de neve",
+
+    "spruce trees":
+        "pinheiros",
+
+    "gravel-covered hills":
+        "colinas cobertas de cascalho",
 
     # -----------------------------------------------------
     # Termos restantes identificados pela auditoria
@@ -548,16 +1050,10 @@ TEXT_TRANSLATIONS = {
         "Machado de Ferro",
 
     "pointed dripstone stalactites and stalagmites":
-        (
-            "estalactites e estalagmites "
-            "de espeleotema pontiagudo"
-        ),
+        "estalactites e estalagmites de espeleotema pontiagudo",
 
     "dense oak and birch trees":
-        (
-            "vegetação densa de "
-            "carvalhos e bétulas"
-        ),
+        "vegetação densa de carvalhos e bétulas",
 
     "frozen surface water":
         "água congelada na superfície",
@@ -572,10 +1068,7 @@ TEXT_TRANSLATIONS = {
         "água de profundidade moderada",
 
     "giant 2x2 spruce trees with dense leaf cover":
-        (
-            "pinheiros gigantes 2x2 "
-            "com folhagem densa"
-        ),
+        "pinheiros gigantes 2x2 com folhagem densa",
 
     "narrow water channel":
         "canal estreito de água",
@@ -584,10 +1077,7 @@ TEXT_TRANSLATIONS = {
         "pinheiros cobertos de neve",
 
     "soul sand and soul soil terrain":
-        (
-            "terreno de Areia das Almas "
-            "e Solo das Almas"
-        ),
+        "terreno de Areia das Almas e Solo das Almas",
 
     "scattered jungle trees":
         "árvores de selva espalhadas",
@@ -596,10 +1086,7 @@ TEXT_TRANSLATIONS = {
         "água rasa",
 
     "terracotta plateaus with oak trees":
-        (
-            "planaltos de terracota "
-            "com carvalhos"
-        ),
+        "planaltos de terracota com carvalhos",
 
     "deep water":
         "águas profundas",
@@ -611,26 +1098,19 @@ TEXT_TRANSLATIONS = {
         "águas muito profundas",
 
     "any overworld biome":
-        (
-            "qualquer bioma do "
-            "Mundo Superior"
-        ),
+        "qualquer bioma do Mundo Superior",
 
     "all overworld biomes":
-        (
-            "todos os biomas do "
-            "Mundo Superior"
-        ),
+        "todos os biomas do Mundo Superior",
 
     # -----------------------------------------------------
     # Fraquezas
     # -----------------------------------------------------
+    "axolotls eat tadpoles":
+        "axolotes comem girinos",
 
     "cracking appearance indicates damage":
-        (
-            "rachaduras na aparência "
-            "indicam dano"
-        ),
+        "rachaduras na aparência indicam dano",
 
     "all damage sources":
         "todas as fontes de dano",
@@ -642,52 +1122,31 @@ TEXT_TRANSLATIONS = {
         "poções arremessáveis de cura",
 
     "cats and ocelots (flees from them)":
-        (
-            "gatos e jaguatiricas "
-            "(foge deles)"
-        ),
+        "gatos e jaguatiricas (foge deles)",
 
     "suffocation on land":
         "sufocamento em terra",
 
     "drowning (needs both air and water)":
-        (
-            "afogamento "
-            "(precisa de ar e água)"
-        ),
+        "afogamento (precisa de ar e água)",
 
     "destroy end crystals first":
-        (
-            "destruir primeiro "
-            "os Cristais do End"
-        ),
+        "destruir primeiro os Cristais do End",
 
     "beds (explode in the end)":
-        (
-            "camas "
-            "(explodem no End)"
-        ),
+        "camas (explodem no End)",
 
     "melee rush (prevent spellcasting)":
-        (
-            "investida corpo a corpo "
-            "(impede a conjuração)"
-        ),
+        "investida corpo a corpo (impede a conjuração)",
 
     "ranged attacks":
         "ataques à distância",
 
     "cats (flees from them)":
-        (
-            "gatos "
-            "(foge deles)"
-        ),
+        "gatos (foge deles)",
 
     "fire (but immune to lava)":
-        (
-            "fogo "
-            "(mas é imune à lava)"
-        ),
+        "fogo (mas é imune à lava)",
 
     "shields":
         "escudos",
@@ -702,10 +1161,7 @@ TEXT_TRANSLATIONS = {
         "terreno elevado",
 
     "attack when shell is open":
-        (
-            "atacar quando a concha "
-            "estiver aberta"
-        ),
+        "atacar quando a concha estiver aberta",
 
     "arrows":
         "flechas",
@@ -714,28 +1170,19 @@ TEXT_TRANSLATIONS = {
         "raios",
 
     "zombies and drowned target baby turtles":
-        (
-            "zumbis e afogados atacam "
-            "filhotes de tartaruga"
-        ),
+        "zumbis e afogados atacam filhotes de tartaruga",
 
     "limited lifespan":
         "tempo de vida limitado",
 
     "ranged attacks (kiting)":
-        (
-            "ataques à distância "
-            "(mantendo distância)"
-        ),
+        "ataques à distância (mantendo distância)",
 
     "instant damage potions":
         "poções de dano instantâneo",
 
     "melee while drinking":
-        (
-            "ataques corpo a corpo "
-            "enquanto bebe"
-        ),
+        "ataques corpo a corpo enquanto bebe",
 
     # -----------------------------------------------------
     # Obtenção
@@ -748,67 +1195,40 @@ TEXT_TRANSLATIONS = {
         "trocas com piglins",
 
     "bastion remnant loot":
-        (
-            "saques do "
-            "Bastião em ruínas"
-        ),
+        "saques do Bastião em ruínas",
 
     "ancient city loot chest":
-        (
-            "baús da "
-            "Cidade ancestral"
-        ),
+        "baús da Cidade ancestral",
 
     "ominous vault":
         "Cofre sinistro",
 
     "trial chamber loot":
-        (
-            "saques das "
-            "Câmaras do desafio"
-        ),
+        "saques das Câmaras do Desafio",
 
     "village church":
         "igreja da vila",
 
     "smelting raw beef":
-        (
-            "assar carne bovina crua"
-        ),
+        "assar carne bovina crua",
 
     "killing cows with fire aspect":
-        (
-            "matar vacas usando "
-            "Aspecto Flamejante"
-        ),
+        "matar vacas usando Aspecto Flamejante",
 
     "smelting raw chicken":
         "assar frango cru",
 
     "killing chickens with fire aspect":
-        (
-            "matar galinhas usando "
-            "Aspecto Flamejante"
-        ),
+        "matar galinhas usando Aspecto Flamejante",
 
     "smelting raw porkchop":
-        (
-            "assar costeleta de "
-            "porco crua"
-        ),
+        "assar costeleta de porco crua",
 
     "killing pigs with fire aspect":
-        (
-            "matar porcos usando "
-            "Aspecto Flamejante"
-        ),
+        "matar porcos usando Aspecto Flamejante",
 
     "using glass bottle on full beehive or bee nest":
-        (
-            "usar um frasco de vidro "
-            "em uma colmeia ou ninho "
-            "de abelhas cheio"
-        ),
+        "usar um frasco de vidro em uma colmeia ou ninho de abelhas cheio",
 
     "mining redstone ore":
         "minerar minério de redstone",
@@ -835,125 +1255,70 @@ TEXT_TRANSLATIONS = {
     # -----------------------------------------------------
     # Perigos de estruturas
     # -----------------------------------------------------
+    "no specific dangers besides normal underground hazards":
+        "riscos normais do subsolo, sem perigos específicos adicionais",
 
-    "warden is the most dangerous mob in the game "
-    "(500 hp, can kill in 2 hits)":
-        (
-            "há um mob extremamente perigoso "
-            "com 500 pontos de vida, capaz "
-            "de derrotar o jogador em poucos golpes"
-        ),
+    "drowning risk while exploring underwater wrecks":
+        "risco de afogamento ao explorar destroços submersos",
+
+    "warden is the most dangerous mob in the game (500 hp, can kill in 2 hits)":
+            "há um mob extremamente perigoso com 500 pontos de vida, capaz de derrotar o jogador em poucos golpes",
 
     "piglin brutes cannot be distracted with gold "
     "and deal massive damage":
-        (
-            "brutos piglins não podem ser "
-            "distraídos com ouro e causam "
-            "muito dano"
-        ),
+        "brutos piglins não podem ser distraídos com ouro e causam muito dano",
 
     "drowning if buried under water":
-        (
-            "há risco de afogamento "
-            "caso fique preso sob a água"
-        ),
+        "há risco de afogamento caso fique preso sob a água",
 
     "must defeat the ender dragon first":
-        (
-            "é necessário derrotar "
-            "o Dragão Ender primeiro"
-        ),
+        "é necessário derrotar o Dragão Ender primeiro",
 
     "zombie villager in basement can attack":
-        (
-            "um aldeão zumbi no porão "
-            "pode atacar"
-        ),
+        "um aldeão zumbi no porão pode atacar",
 
     "arrow trap dispensers on the first floor":
-        (
-            "há ejetores com armadilhas "
-            "de flechas no primeiro andar"
-        ),
+        "há ejetores com armadilhas de flechas no primeiro andar",
 
-    "cave spider spawners are very dangerous "
-    "in tight spaces":
-        (
-            "geradores de aranhas das cavernas "
-            "são muito perigosos "
-            "em espaços apertados"
-        ),
+    "cave spider spawners are very dangerous in tight spaces":
+        "geradores de aranhas das cavernas são muito perigosos em espaços apertados",
 
     "blaze fireballs and fire damage":
-        (
-            "bolas de fogo de Blaze "
-            "e dano causado por fogo"
-        ),
+        "bolas de fogo de Blaze e dano causado por fogo",
 
-    "mining fatigue from elder guardians "
-    "(slows mining by 99.7%)":
-        (
-            "guardiões anciões podem causar "
-            "fadiga de mineração, reduzindo "
-            "drasticamente a velocidade de mineração"
-        ),
+    "mining fatigue from elder guardians (slows mining by 99.7%)":
+        "guardiões anciões podem causar fadiga de mineração, reduzindo drasticamente a velocidade de mineração",
 
     "drowned can carry tridents":
-        (
-            "afogados podem carregar "
-            "tridentes"
-        ),
+        "afogados podem carregar tridentes",
 
     "continuous pillager spawning":
-        (
-            "saqueadores podem aparecer "
-            "continuamente"
-        ),
+        "saqueadores podem aparecer continuamente",
 
     "magma blocks deal damage when stood on":
-        (
-            "blocos de magma causam dano "
-            "quando pisados"
-        ),
+        "blocos de magma causam dano quando pisados",
 
     "silverfish spawner near end portal":
-        (
-            "há um gerador de traças "
-            "próximo ao portal do End"
-        ),
+        "há um gerador de traças próximo ao portal do End",
 
     "trial spawners scale difficulty "
     "with player count":
-        (
-            "geradores de desafio aumentam "
-            "a dificuldade de acordo com "
-            "a quantidade de jogadores"
-        ),
+        "geradores de desafio aumentam a dificuldade de acordo com a quantidade de jogadores",
 
     "zombie sieges at night":
-        (
-            "podem ocorrer cercos de "
-            "zumbis durante a noite"
-        ),
+        "podem ocorrer cercos de zumbis durante a noite",
 
     "witch throws harmful potions":
-        (
-            "bruxas arremessam "
-            "poções nocivas"
-        ),
+        "bruxas arremessam poções nocivas",
 
     "vindicators deal heavy melee damage":
-        (
-            "vingadores causam muito dano "
-            "em ataques corpo a corpo"
-        ),
-}
+        "vingadores causam muito dano em ataques corpo a corpo",
 
+}
 
 # =========================================================
 # FUNÇÕES AUXILIARES
 # =========================================================
-
 
 def _normalize(
     value: Any,
@@ -970,10 +1335,8 @@ def _lookup_name(
     name_translations:
         dict[str, str],
 ) -> str | None:
-    """
-    Procura o nome com algumas variações comuns
-    de representação da API.
-    """
+    
+    # Procura o nome com algumas variações comuns de representação da API.
 
     candidates = {
         value.strip().casefold(),
@@ -1007,11 +1370,8 @@ def _replace_known_entity_names(
     name_translations:
         dict[str, str],
 ) -> str:
-    """
-    Substitui nomes originais de entidades que
-    eventualmente ainda apareçam dentro de uma
-    frase já traduzida.
-    """
+
+    # Substitui nomes originais de entidades que eventualmente ainda apareçam dentro de uma frase já traduzida
 
     result = value
 
@@ -1066,7 +1426,9 @@ def translate_value(
     text = str(value).strip()
 
     normalized = (
-        text.casefold()
+        text
+        .replace("_", " ")
+        .casefold()
     )
 
     translated_text = (
@@ -1083,6 +1445,18 @@ def translate_value(
             normalized
         )
     )
+
+    if " + " in text:
+        parts = text.split(
+            " + "
+        )
+
+        return " + ".join(
+            translate_value(
+                part
+            )
+            for part in parts
+        )
 
     if translated_value:
         return translated_value
@@ -1350,7 +1724,6 @@ def translate_game_text(
 
     # -----------------------------------------------------
     # 5. Encantamento
-    #
     # Bane of Arthropods enchantment
     # Smite enchantment (...)
     # -----------------------------------------------------
@@ -1663,10 +2036,6 @@ def translate_game_text(
 
     # -----------------------------------------------------
     # 14. Forma genérica com parênteses
-    #
-    # Smithing Table (...)
-    # Brewing (...)
-    # Nether (...)
     # End Ship (End City)
     # Snowballs (3 damage)
     # -----------------------------------------------------
