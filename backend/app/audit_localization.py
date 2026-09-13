@@ -43,6 +43,22 @@ ALLOWED_TERMS = {
 # Não precisa conter todas as palavras do inglês:
 # este conjunto serve como segunda camada da auditoria.
 SUSPICIOUS_ENGLISH_WORDS = {
+    "cherry",
+    "cherries",
+    "tree",
+    "trees",
+    "blossom",
+    "drowning",
+    "risk",
+    "while",
+    "house",
+    "houses",
+    "very",
+    "gravel",
+    "floor",
+    "dangers",
+    "eat",
+    "allium",
     "fatigue",
     "fatigues",
     "poison",
