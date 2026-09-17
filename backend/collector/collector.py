@@ -265,7 +265,7 @@ def print_summary(results):
     )
 
 
-def main():
+def main() -> list[dict]:
     results = []
 
     logger.info(
@@ -286,6 +286,7 @@ def main():
     logger.info(
         "Coleta completa finalizada"
     )
+    return results
 
 
 if __name__ == "__main__":
