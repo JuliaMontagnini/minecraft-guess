@@ -1,0 +1,15 @@
+[Unit]
+Description=MinecraftGuess Astroworld Collector
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=ec2-user
+Group=ec2-user
+WorkingDirectory=/opt/minecraft-guess/backend
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/opt/minecraft-guess/backend/.venv/bin/python /opt/minecraft-guess/backend/collector/collector.py
+TimeoutStartSec=15min
+NoNewPrivileges=true
+PrivateTmp=true

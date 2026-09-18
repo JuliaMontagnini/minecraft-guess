@@ -1,0 +1,11 @@
+[Unit]
+Description=Run MinecraftGuess collector daily
+
+[Timer]
+OnCalendar=*-*-* 06:00:00 UTC
+Persistent=true
+RandomizedDelaySec=5min
+Unit=minecraft-guess-collector.service
+
+[Install]
+WantedBy=timers.target

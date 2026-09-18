@@ -1,23 +1,8 @@
-import os
 import logging
 from pathlib import Path
 
 
-if os.getenv(
-    "AWS_LAMBDA_FUNCTION_NAME"
-):
-    LOG_DIR = Path(
-        "/tmp/minecraft-guess/logs"
-    )
-
-else:
-    LOG_DIR = (
-        Path(__file__)
-        .resolve()
-        .parent
-        .parent
-        / "logs"
-    )
+LOG_DIR = Path(__file__).resolve().parent.parent / "logs"
 
 LOG_DIR.mkdir(
     parents=True,
