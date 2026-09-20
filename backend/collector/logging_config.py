@@ -2,10 +2,7 @@ import logging
 from pathlib import Path
 
 
-LOG_DIR = (
-    Path(__file__).resolve().parent.parent
-    / "logs"
-)
+LOG_DIR = Path(__file__).resolve().parent.parent / "logs"
 
 LOG_DIR.mkdir(
     parents=True,
