@@ -44,9 +44,6 @@ class Damage(ApiModel):
 class Drop(ApiModel):
     item: str = Field(min_length=1)
     count: IntRange
-
-    # Não vamos restringir a 0-1 ou 0-100 ainda.
-    # A API aparenta usar formatos diferentes entre categorias.
     chance: float = Field(ge=0)
 
 
