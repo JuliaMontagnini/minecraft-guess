@@ -1,7 +1,13 @@
 import os
 from fastapi import FastAPI
 
-app = FastAPI(root_path="/api")
+app = FastAPI(
+    root_path="/api",
+    openapi_url="/api/openapi.json",
+    docs_url="/api/docs",
+    redoc_url="/api/redoc"
+)
+
 from pathlib import Path
 
 from dotenv import load_dotenv
