@@ -1,4 +1,7 @@
 import os
+from fastapi import FastAPI
+
+app = FastAPI(root_path="/api")
 from pathlib import Path
 
 from dotenv import load_dotenv

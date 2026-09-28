@@ -10,13 +10,9 @@ from models.item import Item
 from models.mob import Mob
 from models.structure import Structure
 
-from repositories.biome_repository import (
-    save_biome,
-)
+from repositories.biome_repository import (save_biome)
 
-from repositories.enchantment_repository import (
-    save_enchantment,
-)
+from repositories.enchantment_repository import (save_enchantment)
 
 from repositories.ingestion_repository import (
     fail_ingestion,
@@ -25,29 +21,19 @@ from repositories.ingestion_repository import (
     start_ingestion,
 )
 
-from repositories.item_repository import (
-    save_item,
-)
+from repositories.item_repository import (save_item)
 
-from repositories.mob_repository import (
-    save_mob,
-)
+from repositories.mob_repository import (save_mob)
 
-from repositories.structure_repository import (
-    save_structure,
-)
+from repositories.structure_repository import (save_structure)
 
 from services.astroworld import (
     AstroworldError,
     fetch_endpoint,
 )
 
-
 configure_logging()
-
-logger = logging.getLogger(
-    "minecraft_guess.collector"
-)
+logger = logging.getLogger("minecraft_guess.collector")
 
 
 COLLECTORS = {
@@ -78,28 +64,14 @@ COLLECTORS = {
 }
 
 
-def collect_endpoint(
-    endpoint: str,
-    model,
-    save_function,
-):
-    logger.info(
-        "Iniciando coleta do endpoint %s",
-        endpoint,
-    )
-
-    run_id = start_ingestion(
-        endpoint
-    )
-
+def collect_endpoint(endpoint: str, model, save_function):
+    logger.info("Iniciando coleta do endpoint %s",endpoint)
+    run_id = start_ingestion(endpoint)
     accepted = 0
     rejected = 0
 
     try:
-        records = fetch_endpoint(
-            endpoint
-        )
-
+        records = fetch_endpoint(endpoint)
         received = len(records)
 
         logger.info(
